@@ -1,0 +1,22 @@
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Homepage url:
+  = @company.homepage_url
+%p
+  %b Short description:
+  = @company.short_description
+%p
+  %b Description:
+  = @company.description
+%p
+  %b Founded on:
+  = @company.founded_on
+%p
+  %b Headquarters:
+  = @company.headquarters
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path
