@@ -1,0 +1,22 @@
+= form_for @funding_round do |f|
+  - if @funding_round.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@funding_round.errors.count, "error")} prohibited this funding_round from being saved:"
+      %ul
+        - @funding_round.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :funding_type
+    = f.text_field :funding_type
+  .field
+    = f.label :money_raised_usd
+    = f.number_field :money_raised_usd
+  .field
+    = f.label :announced_on
+    = f.date_select :announced_on
+  .field
+    = f.label :series
+    = f.text_field :series
+  .actions
+    = f.submit 'Save'

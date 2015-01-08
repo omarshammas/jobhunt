@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Funding type:
+  = @funding_round.funding_type
+%p
+  %b Money raised usd:
+  = @funding_round.money_raised_usd
+%p
+  %b Announced on:
+  = @funding_round.announced_on
+%p
+  %b Series:
+  = @funding_round.series
+
+= link_to 'Edit', edit_funding_round_path(@funding_round)
+\|
+= link_to 'Back', funding_rounds_path

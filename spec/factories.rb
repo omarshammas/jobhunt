@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :company do
     transient do
       sequence(:n) { |n| n }
@@ -12,4 +11,11 @@ FactoryGirl.define do
     headquarters "Ottawa, Canada"
   end
 
+  factory :funding_round do
+    company
+    funding_type 'venture'
+    money_raised_usd 1000000
+    announced_on { (rand(10) + 1).months.ago.to_date }
+    series 'A'
+  end
 end

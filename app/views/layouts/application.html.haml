@@ -7,6 +7,16 @@
     = csrf_meta_tags
   %body
 
+    .container#header
+      .row
+        .col-sm-12
+          #logo.pull-left
+            %h1 Job Hunt
+          %ul.nav.nav-pills.pull-right
+            %li= link_to 'Companies', companies_path
+            %li= link_to 'Funding Rounds', funding_rounds_path
+          .clearfix
+
     .container
       .row
         .col-sm-12
