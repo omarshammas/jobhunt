@@ -46,4 +46,15 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.5.0'
+end
+
+group :test do
+  gem 'database_cleaner', '~> 1.4.0'
+  gem 'shoulda-matchers', '~> 2.7.0', require: false
+  gem 'capybara', '~> 2.4.4'
+  gem 'selenium-webdriver', '~> 2.44.0' # useful for debugging, but phantomjs is the default
+  gem 'poltergeist', '~> 1.5.1'
 end
