@@ -64,9 +64,9 @@ RSpec.describe "Companies", type: :request, js: true do
 
     if company.founded_on
       year, month, day = %w{year month day}.map { |attribute| company.founded_on.send(attribute)}
-      select company.founded_on.year, from: "company[founded_on(1i)]"
-      select Date::MONTHNAMES[company.founded_on.month], from: "company[founded_on(2i)]"
-      select company.founded_on.day, from: "company[founded_on(3i)]"
+      select year, from: "company[founded_on(1i)]"
+      select Date::MONTHNAMES[month], from: "company[founded_on(2i)]"
+      select day, from: "company[founded_on(3i)]"
     end
 
     click_button 'Save'
@@ -78,15 +78,13 @@ RSpec.describe "Companies", type: :request, js: true do
         expect(page).to have_content(company.send(attribute))
       end
     end
-    expect(page).to have_text(company.founded_on.to_s(:simple_date)) unless company.founded_on.blank?
+    expect(page).to have_text(company.founded_on.to_s(:simple_date)) if company.founded_on
     expect(page).to have_link('Website', href: company.homepage_url) unless company.homepage_url.blank?
   end
 
   def validate_last_company_in_db company
     company_in_db = Company.last
     company_attributes.each do |attribute|
-
-      byebug if company_in_db.send(attribute) != company.send(attribute)
       expect(company_in_db.send(attribute)).to eq(company.send(attribute))
     end
   end

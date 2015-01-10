@@ -28,7 +28,7 @@ class FundingRoundsController < ApplicationController
 
     respond_to do |format|
       if @funding_round.save
-        format.html { redirect_to @funding_round, notice: 'Funding round was successfully created.' }
+        format.html { redirect_to @funding_round, notice: 'Funding Round was successfully created.' }
         format.json { render :show, status: :created, location: @funding_round }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class FundingRoundsController < ApplicationController
   def update
     respond_to do |format|
       if @funding_round.update(funding_round_params)
-        format.html { redirect_to @funding_round, notice: 'Funding round was successfully updated.' }
+        format.html { redirect_to @funding_round, notice: 'Funding Round was successfully updated.' }
         format.json { render :show, status: :ok, location: @funding_round }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class FundingRoundsController < ApplicationController
   def destroy
     @funding_round.destroy
     respond_to do |format|
-      format.html { redirect_to funding_rounds_url, notice: 'Funding round was successfully destroyed.' }
+      format.html { redirect_to funding_rounds_url, notice: 'Funding Round was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class FundingRoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def funding_round_params
-      params.require(:funding_round).permit(:funding_type, :money_raised_usd, :announced_on, :series)
+      params.require(:funding_round).permit(:company_id, :funding_type, :money_raised_usd, :announced_on, :series)
     end
 end

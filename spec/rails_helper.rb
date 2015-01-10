@@ -60,4 +60,5 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
   config.include CapybaraHelpers
+  config.include ActionView::Helpers::NumberHelper
 end

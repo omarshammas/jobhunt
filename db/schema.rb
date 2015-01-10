@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150108033724) do
+ActiveRecord::Schema.define(version: 20150108225111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,20 @@ ActiveRecord::Schema.define(version: 20150108033724) do
   end
 
   add_index "funding_rounds", ["company_id"], name: "index_funding_rounds_on_company_id", using: :btree
+
+  create_table "funding_rounds_investors", id: false, force: :cascade do |t|
+    t.integer "funding_round_id"
+    t.integer "investor_id"
+  end
+
+  add_index "funding_rounds_investors", ["funding_round_id"], name: "index_funding_rounds_investors_on_funding_round_id", using: :btree
+  add_index "funding_rounds_investors", ["investor_id"], name: "index_funding_rounds_investors_on_investor_id", using: :btree
+
+  create_table "investors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   add_foreign_key "funding_rounds", "companies"
 end

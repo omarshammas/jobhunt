@@ -1,0 +1,6 @@
+%h1 Listing Investors
+
+= render partial: 'table', locals: { investors: @investors }
+%br
+
+= link_to 'New Investor', new_investor_path, class: 'btn btn-primary'

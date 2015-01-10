@@ -1,3 +1,6 @@
 class Company < ActiveRecord::Base
-  has_many :funding_rounds
+  has_many :funding_rounds, dependent: :destroy
+  has_many :investors, through: :funding_rounds
+
+  validates :name, presence: true
 end
