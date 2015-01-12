@@ -20,11 +20,11 @@
   = @company.headquarters
 
 %br
-%h3 Funding Rounds
+%h3= "#{@company.funding_rounds.size} Funding Rounds"
 = render partial: 'funding_rounds/table', locals: { funding_rounds: @company.funding_rounds }
 
 %br
-%h3 Investors
+%h3= "#{@company.investors.size} Investors"
 = render partial: 'investors/table', locals: { investors: @company.investors }
 
 %br

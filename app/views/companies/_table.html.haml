@@ -1,0 +1,18 @@
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th Name
+      %th Founded on
+      %th Headquarters
+      %th{colspan: 4} Actions
+
+  %tbody
+    - companies.each do |company|
+      %tr{id: get_html_id(company)}
+        %td{title: company.short_description}= company.name
+        %td= company.founded_on.to_s(:simple_date) if company.founded_on
+        %td= company.headquarters
+        %td= link_to 'Website', company.homepage_url, target: '_blank' unless company.homepage_url.blank?
+        %td= link_to 'Show', company
+        %td= link_to 'Edit', edit_company_path(company)
+        %td= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }

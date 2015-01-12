@@ -5,8 +5,12 @@
   = @investor.name
 
 %br
-%h3 Funding Rounds
-= render partial: 'funding_rounds/table', locals: { funding_rounds: @investor.funding_rounds.order(:announced_on) }
+%h3= "#{@investor.funding_rounds.size} Funding Rounds"
+= render partial: 'funding_rounds/table', locals: { funding_rounds: @investor.funding_rounds }
+
+%br
+%h3= "#{@investor.companies.size} Companies"
+= render partial: 'companies/table', locals: { companies: @investor.companies }
 
 = link_to 'Edit', edit_investor_path(@investor), class: 'btn btn-default'
 = link_to 'Back', investors_path, class: 'btn btn-default'
