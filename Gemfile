@@ -41,6 +41,10 @@ gem 'sidekiq', '~> 3.3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#gem 'crunchbase_v2', '0.0.8'
+gem 'crunchbase_v2', git: 'https://github.com/omarshammas/crunchbase_v2.git'
+#gem 'angellist_api', '1.0.7'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -61,4 +65,6 @@ group :test do
   gem 'capybara', '~> 2.4.4'
   gem 'selenium-webdriver', '~> 2.44.0' # useful for debugging, but phantomjs is the default
   gem 'poltergeist', '~> 1.5.1'
+  gem 'vcr', '~> 2.9.3'
+  gem 'webmock', '~> 1.20.4'
 end

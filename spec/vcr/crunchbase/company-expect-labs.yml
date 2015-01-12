@@ -1,0 +1,1511 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/organization/expect-labs?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 12 Jan 2015 21:32:39 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - HIT - 3
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - cb9942be-8c03-4e96-b434-b9eb04d7090e
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '2.327191'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+          },
+          "data": {
+            "uuid": "4257c5971cbd60d370e58e58f2629c11",
+            "type": "Organization",
+            "properties": {
+              "secondary_role_for_profit": true,
+              "role_company": true,
+              "short_description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences.",
+              "permalink": "expect-labs",
+              "primary_role": "company",
+              "closed_on_trust_code": 0,
+              "name": "Expect Labs",
+              "founded_on_day": 1,
+              "founded_on_month": 1,
+              "founded_on_year": 2011,
+              "founded_on": "2011-01-01",
+              "founded_on_trust_code": 4,
+              "is_closed": false,
+              "description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences for any app, device or website. Companies use this platform to create voice-driven assistants that understand what users say and automatically find the information they need before they have to type a search query. Expect Labs has been widely recognized as a leader in the field of anticipatory computing and was named by MIT Technology Review as one of the world&#39;s &quot;50 Smartest Companies&quot; of 2014. Developers can learn more and start building intelligent, voice-driven apps for free at developer.expectlabs.com.\n",
+              "closed_on_day": null,
+              "closed_on_month": null,
+              "closed_on_year": null,
+              "closed_on": null,
+              "num_employees_max": 50,
+              "num_employees_min": 11,
+              "num_employees_range": null,
+              "homepage_url": "http://expectlabs.com",
+              "email_address": "info@expectlabs.com",
+              "created_at": 1342142595,
+              "updated_at": 1418907603,
+              "total_funding_usd": 15400000,
+              "number_of_investments": 0
+            },
+            "relationships": {
+              "past_team": {
+                "paging": {
+                  "total_items": 6,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/past_team",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "first_name": "Walter",
+                    "last_name": "Aldana",
+                    "title": "VP of Business Development",
+                    "started_on": null,
+                    "ended_on": null,
+                    "path": "person/walter-aldana",
+                    "created_at": 1402092402,
+                    "updated_at": 1402092402
+                  },
+                  {
+                    "first_name": "Brett",
+                    "last_name": "Barros",
+                    "title": "UX Designer & Developer",
+                    "started_on": "2011-01-01",
+                    "ended_on": null,
+                    "path": "person/brett-barros",
+                    "created_at": 1351926495,
+                    "updated_at": 1397989628
+                  },
+                  {
+                    "first_name": "Kira",
+                    "last_name": "Deutch",
+                    "title": "Social Media Manager",
+                    "started_on": "2012-01-01",
+                    "ended_on": null,
+                    "path": "person/kira-deutch",
+                    "created_at": 1352365897,
+                    "updated_at": 1397989675
+                  },
+                  {
+                    "first_name": "Moninder",
+                    "last_name": "Jheeta",
+                    "title": "CTO and Founder",
+                    "started_on": "2011-01-01",
+                    "ended_on": null,
+                    "path": "person/moninder-jheeta",
+                    "created_at": 1342142596,
+                    "updated_at": 1397989183
+                  },
+                  {
+                    "first_name": "Pete",
+                    "last_name": "Kocks",
+                    "title": "VP of Engineering",
+                    "started_on": "2009-06-01",
+                    "ended_on": "2009-09-01",
+                    "path": "person/pete-kocks",
+                    "created_at": 1199202039,
+                    "updated_at": 1397989206
+                  },
+                  {
+                    "first_name": "George",
+                    "last_name": "Kola",
+                    "title": "Chief Architect",
+                    "started_on": "2011-01-01",
+                    "ended_on": null,
+                    "path": "person/george-kola",
+                    "created_at": 1351926438,
+                    "updated_at": 1397989628
+                  }
+                ]
+              },
+              "board_members_and_advisors": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/board_members_and_advisors",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "first_name": "Paul",
+                    "last_name": "Vidich",
+                    "title": "Investor",
+                    "started_on": "2011-12-01",
+                    "path": "person/paul-vidich",
+                    "created_at": 1197207939,
+                    "updated_at": 1413859620
+                  },
+                  {
+                    "first_name": "Alex",
+                    "last_name": "Rosen",
+                    "title": "Board Member",
+                    "started_on": "2012-01-01",
+                    "path": "person/alex-rosen",
+                    "created_at": 1250132897,
+                    "updated_at": 1420594124
+                  }
+                ]
+              },
+              "current_team": {
+                "paging": {
+                  "total_items": 10,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/current_team",
+                  "sort_order": "custom"
+                },
+                "items": [
+                  {
+                    "first_name": "Steven",
+                    "last_name": "Bancroft",
+                    "title": "Manager of Operations",
+                    "started_on": null,
+                    "path": "person/steven-bancroft",
+                    "created_at": 1402092361,
+                    "updated_at": 1402092362
+                  },
+                  {
+                    "first_name": "Swaraj",
+                    "last_name": "Banerjee",
+                    "title": "Software Engineer",
+                    "started_on": null,
+                    "path": "person/swaraj-banerjee",
+                    "created_at": 1402092327,
+                    "updated_at": 1402092327
+                  },
+                  {
+                    "first_name": "Marsal",
+                    "last_name": "Gavald\u00e0",
+                    "title": "Director of Research",
+                    "started_on": "2012-01-01",
+                    "path": "person/marsal-gavald",
+                    "created_at": 1352365998,
+                    "updated_at": 1397989676
+                  },
+                  {
+                    "first_name": "James",
+                    "last_name": "Gill",
+                    "title": "Software Engineer",
+                    "started_on": null,
+                    "path": "person/james-gill-2",
+                    "created_at": 1402092430,
+                    "updated_at": 1402092430
+                  },
+                  {
+                    "first_name": "J.J.",
+                    "last_name": "Jackson",
+                    "title": "Software Engineer",
+                    "started_on": null,
+                    "path": "person/j-j-jackson",
+                    "created_at": 1402092455,
+                    "updated_at": 1402092455
+                  },
+                  {
+                    "first_name": "Tim",
+                    "last_name": "Tuttle",
+                    "title": "CEO and Founder",
+                    "started_on": "2011-01-01",
+                    "path": "person/tim-tuttle",
+                    "created_at": 1347054470,
+                    "updated_at": 1397989105
+                  },
+                  {
+                    "first_name": "Stephanie",
+                    "last_name": "Lonn",
+                    "title": "Recruiting Manager",
+                    "started_on": null,
+                    "path": "person/stephanie-lonn",
+                    "created_at": 1402092276,
+                    "updated_at": 1402092276
+                  },
+                  {
+                    "first_name": "Suvda",
+                    "last_name": "Myagmar",
+                    "title": "Principal Software Engineer",
+                    "started_on": null,
+                    "path": "person/suvda-myagmar",
+                    "created_at": 1343794166,
+                    "updated_at": 1397989411
+                  }
+                ]
+              },
+              "competitors": {
+                "paging": {
+                  "total_items": 3,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/competitors",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Organization",
+                    "name": "Wit.ai",
+                    "path": "organization/wit-ai",
+                    "created_at": 1394669621,
+                    "updated_at": 1420514371
+                  },
+                  {
+                    "type": "Organization",
+                    "name": "Algolia",
+                    "path": "organization/algolia",
+                    "created_at": 1347746576,
+                    "updated_at": 1418925597
+                  },
+                  {
+                    "type": "Organization",
+                    "name": "Swiftype",
+                    "path": "organization/swiftype",
+                    "created_at": 1336637886,
+                    "updated_at": 1418929103
+                  }
+                ]
+              },
+              "offices": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/offices",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Address",
+                    "name": "HQ",
+                    "street_1": "350 Sansome St. Suite 750",
+                    "street_2": null,
+                    "postal_code": null,
+                    "city": "San Francisco",
+                    "city_path": "location/san-francisco/528f5e3c90d111115d1c2e4ff979d58e",
+                    "region": "California",
+                    "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+                    "country": "United States",
+                    "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+                    "latitude": 37.7749295,
+                    "longitude": -122.4194155,
+                    "created_at": 1351901153,
+                    "updated_at": 1405673885
+                  }
+                ]
+              },
+              "headquarters": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/headquarters",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Address",
+                    "name": "HQ",
+                    "street_1": "350 Sansome St. Suite 750",
+                    "street_2": null,
+                    "postal_code": null,
+                    "city": "San Francisco",
+                    "city_path": "location/san-francisco/528f5e3c90d111115d1c2e4ff979d58e",
+                    "region": "California",
+                    "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+                    "country": "United States",
+                    "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+                    "latitude": 37.7749295,
+                    "longitude": -122.4194155,
+                    "created_at": 1351901153,
+                    "updated_at": 1405673885
+                  }
+                ]
+              },
+              "funding_rounds": {
+                "paging": {
+                  "total_items": 4,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/funding_rounds",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "FundingRound",
+                    "name": "Expect Labs Funding Round",
+                    "path": "funding-round/1996572821477c18c003cac18a638b04",
+                    "created_at": 1418907602,
+                    "updated_at": 1418959946
+                  },
+                  {
+                    "type": "FundingRound",
+                    "name": "Expect Labs Funding Round",
+                    "path": "funding-round/7b29c382755f7d7df596c4b148ecd1fd",
+                    "created_at": 1405746195,
+                    "updated_at": 1405746195
+                  },
+                  {
+                    "type": "FundingRound",
+                    "name": "Expect Labs raises 0 in convertible_note round",
+                    "path": "funding-round/4a770441d10fa72348e3f49edab05b75",
+                    "created_at": 1367444984,
+                    "updated_at": 1398010036
+                  },
+                  {
+                    "type": "FundingRound",
+                    "name": "Expect Labs raises 2400000 in unknown round",
+                    "path": "funding-round/a9912fbb4cb11a894fc8e50a9c78c76d",
+                    "created_at": 1349421336,
+                    "updated_at": 1415306091
+                  }
+                ]
+              },
+              "categories": {
+                "paging": {
+                  "total_items": 9,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/categories",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Category",
+                    "name": "Speech Recognition",
+                    "uuid": "24dad27e6a49ccc1ec31854b73d60d16",
+                    "path": "category/speech recognition/24dad27e6a49ccc1ec31854b73d60d16",
+                    "created_at": 1397980728,
+                    "updated_at": 1420446403
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Artificial Intelligence",
+                    "uuid": "c4d8caf35fe7359bf9f22d708378e4ee",
+                    "path": "category/artificial intelligence/c4d8caf35fe7359bf9f22d708378e4ee",
+                    "created_at": 1397980728,
+                    "updated_at": 1420786315
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Semantic Search",
+                    "uuid": "bb1777e525f3b9f2922b0d5defe0d5bb",
+                    "path": "category/semantic search/bb1777e525f3b9f2922b0d5defe0d5bb",
+                    "created_at": 1397980727,
+                    "updated_at": 1419891180
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Search",
+                    "uuid": "0d39287e5b1377a6970274294daded43",
+                    "path": "category/search/0d39287e5b1377a6970274294daded43",
+                    "created_at": 1397980727,
+                    "updated_at": 1421018436
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Apps",
+                    "uuid": "af3332489c7e50c5168ae91b86595a17",
+                    "path": "category/apps/af3332489c7e50c5168ae91b86595a17",
+                    "created_at": 1397980727,
+                    "updated_at": 1421036246
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Machine Learning",
+                    "uuid": "5ea0cdb7c9a647fc50f8c9b0fac04863",
+                    "path": "category/machine learning/5ea0cdb7c9a647fc50f8c9b0fac04863",
+                    "created_at": 1397980727,
+                    "updated_at": 1421002732
+                  },
+                  {
+                    "type": "Category",
+                    "name": "iPad",
+                    "uuid": "c757026ee5818e384d66184fb060aefd",
+                    "path": "category/i-pad/c757026ee5818e384d66184fb060aefd",
+                    "created_at": 1397980727,
+                    "updated_at": 1420610177
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Software",
+                    "uuid": "c08b5441a05b9777b7a6012728caddd9",
+                    "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+                    "created_at": 1397980727,
+                    "updated_at": 1421037545
+                  }
+                ]
+              },
+              "founders": {
+                "paging": {
+                  "total_items": 3,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/founders",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Person",
+                    "name": "Tim Tuttle",
+                    "path": "person/tim-tuttle",
+                    "created_at": 1347054470,
+                    "updated_at": 1397989105
+                  },
+                  {
+                    "type": "Person",
+                    "name": "Moninder Jheeta",
+                    "path": "person/moninder-jheeta",
+                    "created_at": 1342142596,
+                    "updated_at": 1397989183
+                  },
+                  {
+                    "type": "Person",
+                    "name": "Timothy Tuttle",
+                    "path": "person/timothy-tuttle",
+                    "created_at": 1199201971,
+                    "updated_at": 1416469825
+                  }
+                ]
+              },
+              "products": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/products",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Product",
+                    "name": "MindMeld API",
+                    "path": "product/mindmeld-api",
+                    "created_at": 1390978380,
+                    "updated_at": 1402093748
+                  },
+                  {
+                    "type": "Product",
+                    "name": "MindMeld App",
+                    "path": "product/mindmeld-app",
+                    "created_at": 1351928528,
+                    "updated_at": 1411775267
+                  }
+                ]
+              },
+              "primary_image": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/primary_image",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "ImageAsset",
+                    "title": null,
+                    "path": "image/upload/v1397750347/b72d4e6117c4c14acdb2d1592ca4128f.jpg",
+                    "created_at": 1398019043,
+                    "updated_at": 1398019043
+                  }
+                ]
+              },
+              "images": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/images",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "ImageAsset",
+                    "title": null,
+                    "path": "image/upload/v1397750349/0911b0cd6486dc6b1c9c8ce7f64039e9.jpg",
+                    "created_at": 1398019043,
+                    "updated_at": 1398019043
+                  },
+                  {
+                    "type": "ImageAsset",
+                    "title": null,
+                    "path": "image/upload/v1397750348/49f5b65e74e840eaf9319f8833bab0de.png",
+                    "created_at": 1398019043,
+                    "updated_at": 1398019043
+                  }
+                ]
+              },
+              "websites": {
+                "paging": {
+                  "total_items": 7,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/websites",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://www.linkedin.com/company/expect-labs",
+                    "type": "WebPresence",
+                    "title": "linkedin",
+                    "created_at": 1405673839,
+                    "updated_at": 1409464650
+                  },
+                  {
+                    "url": "http://www.instagram.com/expectlabs",
+                    "type": "WebPresence",
+                    "title": "instagram",
+                    "created_at": 1397877760,
+                    "updated_at": 2014
+                  },
+                  {
+                    "url": "http://www.plus.google.com/114440800119062489861",
+                    "type": "WebPresence",
+                    "title": "google+",
+                    "created_at": 1397877760,
+                    "updated_at": 2014
+                  },
+                  {
+                    "url": "http://www.facebook.com/ExpectLabs",
+                    "type": "WebPresence",
+                    "title": "facebook",
+                    "created_at": 1397877760,
+                    "updated_at": 2014
+                  },
+                  {
+                    "url": "http://twitter.com/expectlabs",
+                    "type": "WebPresence",
+                    "title": "twitter",
+                    "created_at": 1342117395,
+                    "updated_at": 1409425961
+                  },
+                  {
+                    "url": "http://blog.expectlabs.com/",
+                    "type": "WebPresence",
+                    "title": "blog",
+                    "created_at": 1342117395,
+                    "updated_at": 1397988251
+                  },
+                  {
+                    "url": "http://expectlabs.com",
+                    "type": "WebPresence",
+                    "title": "homepage",
+                    "created_at": 1342117395,
+                    "updated_at": 1397988251
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 63,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://www.fastcolabs.com/3034067/the-race-to-be-the-ultimate-siri-killer",
+                    "author": null,
+                    "posted_on": "2014-08-06",
+                    "type": "PressReference",
+                    "title": "The Race To Be The Ultimate Siri Killer",
+                    "created_at": 1414107668,
+                    "updated_at": 1414107668
+                  },
+                  {
+                    "url": "http://venturebeat.com/2014/07/09/expect-labs-and-appboy-win-our-mobilebeat-innovation-showdown/",
+                    "author": null,
+                    "posted_on": "2014-07-09",
+                    "type": "PressReference",
+                    "title": "Expect Labs and Appboy win our MobileBeat Innovation Showdown",
+                    "created_at": 1414107637,
+                    "updated_at": 1414107637
+                  },
+                  {
+                    "url": "https://gigaom.com/2014/08/27/expect-labs-aims-its-smart-voice-apis-at-shopping/",
+                    "author": "Derrick Harris",
+                    "posted_on": "2014-08-27",
+                    "type": "PressReference",
+                    "title": "Expect Labs aims its smart voice APIs at shopping",
+                    "created_at": 1414107516,
+                    "updated_at": 1414107517
+                  },
+                  {
+                    "url": "http://venturebeat.com/2014/08/27/expect-labs-voice-powered-smarts-heads-to-online-shopping/",
+                    "author": null,
+                    "posted_on": "2013-08-27",
+                    "type": "PressReference",
+                    "title": "Expect Labs' voice-powered smarts heads to online shopping",
+                    "created_at": 1414107488,
+                    "updated_at": 1414107488
+                  },
+                  {
+                    "url": "http://www.programmableweb.com/news/mindmeld-api-helps-businesses-prepare-voice-activated-future/2014/09/19",
+                    "author": null,
+                    "posted_on": "2014-09-19",
+                    "type": "PressReference",
+                    "title": "MindMeld API Helps Businesses Prepare for a Voice-Activated Future",
+                    "created_at": 1414107457,
+                    "updated_at": 1414107458
+                  },
+                  {
+                    "url": "http://techcrunch.com/2014/07/17/expect-labs-lands-in-q-tel-investment-will-help-u-s-intelligence-integrate-its-mindmeld-technology/",
+                    "author": null,
+                    "posted_on": "2014-07-17",
+                    "type": "PressReference",
+                    "title": "Expect Labs Lands In-Q-Tel Investment, Will Help U.S. Intelligence Integrate Its MindMeld Technology | TechCrunch",
+                    "created_at": 1405673771,
+                    "updated_at": 1405673771
+                  },
+                  {
+                    "url": "http://semanticweb.com/mindmeld-makes-context-count-search_b42725",
+                    "author": null,
+                    "posted_on": null,
+                    "type": "PressReference",
+                    "title": "MindMeld Makes Context Count In Search",
+                    "created_at": 1402093610,
+                    "updated_at": 1402093610
+                  },
+                  {
+                    "url": "http://gigaom.com/2014/03/20/expect-labs-swiftkey-founders-describe-a-world-of-persistent-search/",
+                    "author": "Kevin Fitchard",
+                    "posted_on": null,
+                    "type": "PressReference",
+                    "title": "Expect Labs, SwiftKey founders describe a world of persistent search",
+                    "created_at": 1402093574,
+                    "updated_at": 1402093574
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 12 Jan 2015 21:30:13 GMT
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 12 Jan 2015 21:33:08 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c8e64d52-8d84-41cd-a71b-95738b00743e
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '0.880482'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+          },
+          "data": {
+            "uuid": "1996572821477c18c003cac18a638b04",
+            "type": "FundingRound",
+            "properties": {
+              "funding_type": "venture",
+              "announced_on_year": 2014,
+              "announced_on_day": 18,
+              "announced_on_month": 12,
+              "announced_on": "2014-12-18",
+              "announced_on_trust_code": 7,
+              "canonical_currency_code": "USD",
+              "money_raised_currency_code": "USD",
+              "permalink": "1996572821477c18c003cac18a638b04",
+              "name": "Expect Labs Funding Round",
+              "money_raised": 13000000,
+              "target_money_raised_currency_code": "USD",
+              "target_money_raised": null,
+              "post_money_valuation_currency_code": "USD",
+              "money_raised_usd": 13000000,
+              "series": "A",
+              "post_money_valuation": null,
+              "created_at": 1418907602,
+              "updated_at": 1418959946
+            },
+            "relationships": {
+              "investments": {
+                "paging": {
+                  "total_items": 11,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/investments",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "KPG Ventures",
+                      "path": "organization/kpg-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Bessemer Venture Partners",
+                      "path": "organization/bessemer-venture-partners"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Greylock Partners",
+                      "path": "organization/greylock"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Google Ventures",
+                      "path": "organization/google-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Quest Venture Partners",
+                      "path": "organization/quest-venture-partners"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Fenox Venture Capital",
+                      "path": "organization/fenox-venture-capital"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Liberty Global Ventures",
+                      "path": "organization/liberty-global-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Telef\u00f3nica Digital",
+                      "path": "organization/telefonica-digital"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Samsung Ventures",
+                      "path": "organization/samsung-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Intel Capital",
+                      "path": "organization/intel-capital"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "IDG Ventures USA",
+                      "path": "organization/idg-ventures-usa"
+                    }
+                  }
+                ]
+              },
+              "funded_organization": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/funded_organization",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Organization",
+                    "name": "Expect Labs",
+                    "path": "organization/expect-labs",
+                    "created_at": 1342142595,
+                    "updated_at": 1418907603
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://techcrunch.com/2014/12/18/expect-labs-raises-13m-to-give-apps-better-voice-controls/",
+                    "author": "Kyle Russell",
+                    "posted_on": "2014-12-18",
+                    "type": "PressReference",
+                    "title": "Expect Labs Raises $13M To Give Apps Better Voice\u00a0Controls",
+                    "created_at": 1418959946,
+                    "updated_at": 1418959946
+                  },
+                  {
+                    "url": "http://www.prnewswire.com/news-releases/expect-labs-raises-13m-series-a-to-bring-intelligent-voice-interfaces-to-every-device-and-application-300011606.html",
+                    "author": "Expect Labs",
+                    "posted_on": "2014-12-18",
+                    "type": "PressReference",
+                    "title": "Expect Labs Raises $13M Series A to Bring Intelligent Voice Interfaces to Every Device and Application",
+                    "created_at": 1418907623,
+                    "updated_at": 1418907624
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 12 Jan 2015 21:30:14 GMT
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 12 Jan 2015 21:33:09 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 5db28a1d-7bcd-41d8-87bb-89ce18563ebf
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '0.267127'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '783'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+          },
+          "data": {
+            "uuid": "7b29c382755f7d7df596c4b148ecd1fd",
+            "type": "FundingRound",
+            "properties": {
+              "funding_type": "undisclosed",
+              "announced_on_year": 2014,
+              "announced_on_day": 18,
+              "announced_on_month": 7,
+              "announced_on": "2014-07-18",
+              "announced_on_trust_code": 7,
+              "canonical_currency_code": "USD",
+              "money_raised_currency_code": "USD",
+              "permalink": "7b29c382755f7d7df596c4b148ecd1fd",
+              "name": "Expect Labs Funding Round",
+              "target_money_raised_currency_code": "USD",
+              "created_at": 1405746195,
+              "updated_at": 1405746195
+            },
+            "relationships": {
+              "investments": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/investments",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "In-Q-Tel",
+                      "path": "organization/in-q-tel"
+                    }
+                  }
+                ]
+              },
+              "funded_organization": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/funded_organization",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Organization",
+                    "name": "Expect Labs",
+                    "path": "organization/expect-labs",
+                    "created_at": 1342142595,
+                    "updated_at": 1418907603
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://www.pehub.com/2014/07/in-q-tel-backs-expect-labs/",
+                    "author": null,
+                    "posted_on": "2014-07-18",
+                    "type": "PressReference",
+                    "title": "In-Q-Tel backs Expect Labs",
+                    "created_at": 1405746237,
+                    "updated_at": 1405746237
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 12 Jan 2015 21:30:16 GMT
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 12 Jan 2015 21:32:43 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 7c8649fc-1c0f-4a82-978f-a3bddad18c34
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '0.840154'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+          },
+          "data": {
+            "uuid": "4a770441d10fa72348e3f49edab05b75",
+            "type": "FundingRound",
+            "properties": {
+              "funding_type": "convertible_note",
+              "announced_on_year": 2013,
+              "announced_on_day": 22,
+              "announced_on_month": 7,
+              "announced_on": "2013-07-22",
+              "announced_on_trust_code": 7,
+              "canonical_currency_code": "USD",
+              "money_raised_currency_code": "USD",
+              "permalink": "4a770441d10fa72348e3f49edab05b75",
+              "name": "Expect Labs raises 0 in convertible_note round",
+              "post_money_valuation_currency_code": "USD",
+              "created_at": 1367444984,
+              "updated_at": 1398010036
+            },
+            "relationships": {
+              "investments": {
+                "paging": {
+                  "total_items": 6,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/investments",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "IDG Ventures USA",
+                      "path": "organization/idg-ventures-usa"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Liberty Global Ventures",
+                      "path": "organization/liberty-global-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Samsung Ventures",
+                      "path": "organization/samsung-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Intel Capital",
+                      "path": "organization/intel-capital"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Telefonica Ventures",
+                      "path": "organization/telefonica-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Google Ventures",
+                      "path": "organization/google-ventures"
+                    }
+                  }
+                ]
+              },
+              "funded_organization": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/funded_organization",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Organization",
+                    "name": "Expect Labs",
+                    "path": "organization/expect-labs",
+                    "created_at": 1342142595,
+                    "updated_at": 1418907603
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://allthingsd.com/20130722/expect-labs-raises-more-funding-for-mindmeld-app/",
+                    "author": null,
+                    "posted_on": null,
+                    "type": "PressReference",
+                    "title": "Expect Labs Raises More Funding for MindMeld App",
+                    "created_at": 1367444984,
+                    "updated_at": 1398010036
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 12 Jan 2015 21:30:17 GMT
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 12 Jan 2015 21:33:10 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - HIT - 1
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6caad779-9248-46f2-a91c-56b5b7b05dbd
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '0.709513'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+          },
+          "data": {
+            "uuid": "a9912fbb4cb11a894fc8e50a9c78c76d",
+            "type": "FundingRound",
+            "properties": {
+              "post_money_valuation_currency_code": "USD",
+              "funding_type": "venture",
+              "money_raised_usd": 2400000,
+              "announced_on_year": 2012,
+              "announced_on_day": 4,
+              "announced_on_month": 10,
+              "announced_on": "2012-10-04",
+              "announced_on_trust_code": 7,
+              "canonical_currency_code": "USD",
+              "money_raised": 2400000,
+              "money_raised_currency_code": "USD",
+              "permalink": "a9912fbb4cb11a894fc8e50a9c78c76d",
+              "name": "Expect Labs raises 2400000 in unknown round",
+              "created_at": 1349421336,
+              "updated_at": 1415306091
+            },
+            "relationships": {
+              "investments": {
+                "paging": {
+                  "total_items": 7,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/investments",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Greylock Partners",
+                      "path": "organization/greylock"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Google Ventures",
+                      "path": "organization/google-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "KPG Ventures",
+                      "path": "organization/kpg-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "KPG Ventures",
+                      "path": "organization/kpg-ventures"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "IDG Ventures USA",
+                      "path": "organization/idg-ventures-usa"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Quest Venture Partners",
+                      "path": "organization/quest-venture-partners"
+                    }
+                  },
+                  {
+                    "type": "InvestorInvestment",
+                    "money_invested": null,
+                    "money_invested_currency_code": "USD",
+                    "money_invested_usd": null,
+                    "investor": {
+                      "type": "Organization",
+                      "name": "Bessemer Venture Partners",
+                      "path": "organization/bessemer-venture-partners"
+                    }
+                  }
+                ]
+              },
+              "funded_organization": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/funded_organization",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Organization",
+                    "name": "Expect Labs",
+                    "path": "organization/expect-labs",
+                    "created_at": 1342142595,
+                    "updated_at": 1418907603
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://techcrunch.com/2012/10/04/disrupt-battlefield-finalist-expect-labs-locks-up-2-4m-in-funding-for-its-real-time-conversation-analyzer/",
+                    "author": null,
+                    "posted_on": null,
+                    "type": "PressReference",
+                    "title": "Disrupt Battlefield Finalist Expect Labs Locks Up $2.4M In Funding For Its Real-Time Conversation Analyzer | TechCrunch",
+                    "created_at": 1349421336,
+                    "updated_at": 1398009839
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 12 Jan 2015 21:30:17 GMT
+recorded_with: VCR 2.9.3
