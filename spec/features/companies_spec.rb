@@ -30,7 +30,7 @@ RSpec.describe "Companies", type: :request, js: true do
     end
 
     it 'edits a company' do
-      @new_company = FactoryGirl.build :company
+      @new_company = FactoryGirl.build :company, is_closed: !@company.is_closed
 
       click_link_in_row @company, 'Edit'
       fill_in_company_form @new_company
@@ -57,16 +57,25 @@ RSpec.describe "Companies", type: :request, js: true do
   end
 
   def fill_in_company_form company
-    attributes = company_attributes - %w{founded_on}
+    dates = %w{founded_on}
+    checkboxes = %w{is_closed}
+    attributes = company_attributes - dates - checkboxes
     attributes.each do |attribute|
       fill_in "company[#{attribute}]", with: company.send(attribute)
     end
 
-    if company.founded_on
-      year, month, day = %w{year month day}.map { |attribute| company.founded_on.send(attribute)}
-      select year, from: "company[founded_on(1i)]"
-      select Date::MONTHNAMES[month], from: "company[founded_on(2i)]"
-      select day, from: "company[founded_on(3i)]"
+    checkboxes.each do |checkbox|
+      name = "company[#{checkbox}]"
+      company.send(checkbox) ? check(name) : uncheck(name)
+    end
+
+    dates.each do |date|
+      if company.send(date)
+        year, month, day = %w{year month day}.map { |attribute| company.send(date).send(attribute)}
+        select year, from: "company[#{date}(1i)]"
+        select Date::MONTHNAMES[month], from: "company[#{date}(2i)]"
+        select day, from: "company[#{date}(3i)]"
+      end
     end
 
     click_button 'Save'

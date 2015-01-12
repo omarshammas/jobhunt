@@ -5,6 +5,7 @@ FactoryGirl.define do
     end
     name { "Company #{n}" }
     homepage_url { "http://example.com/company-#{n}" }
+    is_closed false
     short_description { "Short description of #{name}" }
     description { "Long Description of Company #{name}" }
     founded_on { (rand(10) + 1).years.ago.to_date }

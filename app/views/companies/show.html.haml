@@ -4,6 +4,9 @@
   %b Homepage url:
   = link_to @company.homepage_url, @company.homepage_url unless @company.homepage_url.blank?
 %p
+  %b Is closed:
+  = @company.is_closed?
+%p
   %b Short description:
   = @company.short_description
 %p
