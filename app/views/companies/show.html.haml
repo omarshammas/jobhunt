@@ -2,7 +2,7 @@
 %h1= @company.name
 %p
   %b Homepage url:
-  = link_to @company.homepage_url, @company.homepage_url unless @company.homepage_url.blank?
+  = link_to @company.homepage_url, @company.homepage_url, target: '_blank'  unless @company.homepage_url.blank?
 %p
   %b Is closed:
   = @company.is_closed?
@@ -21,7 +21,7 @@
 
 %br
 %h3= "#{@company.funding_rounds.size} Funding Rounds"
-= render partial: 'funding_rounds/table', locals: { funding_rounds: @company.funding_rounds }
+= render partial: 'funding_rounds/table', locals: { funding_rounds: @company.funding_rounds.order_by_most_recent }
 
 %br
 %h3= "#{@company.investors.size} Investors"

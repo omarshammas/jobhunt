@@ -6,7 +6,7 @@
 
 %br
 %h3= "#{@investor.funding_rounds.size} Funding Rounds"
-= render partial: 'funding_rounds/table', locals: { funding_rounds: @investor.funding_rounds }
+= render partial: 'funding_rounds/table', locals: { funding_rounds: @investor.funding_rounds.order_by_most_recent }
 
 %br
 %h3= "#{@investor.companies.size} Companies"
