@@ -1,5 +1,17 @@
 class CrunchbaseCompanyWorker
   include Sidekiq::Worker
+  sidekiq_options retry: 5
+
+  sidekiq_retry_in do |count|
+    case count
+    when 1..3
+      1.min
+    when 4
+      1.hr
+    else
+      1.day
+    end
+  end
 
   # TODO - remove adelphic just used for
   # testing purposes now
