@@ -4,9 +4,9 @@ class CrunchbaseCompanyWorker
 
   sidekiq_retry_in do |count|
     case count
-    when 1..3
+    when 0..2
       1.min
-    when 4
+    when 3
       1.hr
     else
       1.day
