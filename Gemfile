@@ -37,7 +37,6 @@ gem 'sidekiq', '~> 3.3.0'
 
 # Use Unicorn as the app server
 gem 'unicorn'
-gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -69,3 +68,7 @@ group :test do
   gem 'vcr', '~> 2.9.3'
   gem 'webmock', '~> 1.20.4'
 end
+
+# deployment on heroku
+gem 'rails_12factor', group: :production
+ruby '2.2.0'
