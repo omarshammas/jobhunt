@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CrunchbaseCompanyWorker do
 
-  it 'should grab all the investments of the specified investor for processing' do
+  it 'should retrieve the startup data using the crunchbase api' do
     VCR.use_cassette('crunchbase/company-expect-labs') do
       worker = CrunchbaseCompanyWorker.new
       worker.perform('Expect Labs')

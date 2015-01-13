@@ -44,7 +44,7 @@ gem 'rails_12factor', group: :production
 
 #gem 'crunchbase_v2', '0.0.8'
 gem 'crunchbase_v2', git: 'https://github.com/omarshammas/crunchbase_v2.git'
-#gem 'angellist_api', '1.0.7'
+gem 'angellist_api', '1.0.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
