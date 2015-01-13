@@ -8,7 +8,7 @@
 
   %tbody
     - companies.each do |company|
-      %tr{id: get_html_id(company)}
+      %tr{id: get_html_id(company), class: ('closed' if company.is_closed?) }
         %td{title: company.short_description}= company.name
         %td= company.founded_on.to_s(:simple_date) if company.founded_on
         %td= company.headquarters
