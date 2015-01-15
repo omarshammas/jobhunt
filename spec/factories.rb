@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :company do
     transient do
       sequence(:n) { |n| n }
@@ -47,5 +48,25 @@ FactoryGirl.define do
       sequence(:n) { |n| n }
     end
     name { "Investor #{n}" }
+  end
+
+  factory :job do
+    transient do
+      sequence(:n) { |n| n }
+    end
+    company
+    title { "Software Developer #{n}" }
+    angellist_job_id { n }
+    description { "Description #{n}" }
+    job_type "full-time"
+    salary_min 100000
+    salary_max 120000
+    currency_code "USD"
+    equity_min 0.1
+    equity_max 0.5
+    equity_cliff 1.0
+    equity_vest 6.0
+    remote_ok false
+    tags ["coffeescript", "ruby on rails"]
   end
 end

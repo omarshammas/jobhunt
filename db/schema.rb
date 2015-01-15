@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115220830) do
+ActiveRecord::Schema.define(version: 20150115234014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,5 +58,29 @@ ActiveRecord::Schema.define(version: 20150115220830) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "angellist_job_id"
+    t.string   "job_type"
+    t.string   "location"
+    t.string   "role"
+    t.integer  "salary_min"
+    t.integer  "salary_max"
+    t.string   "currency_code"
+    t.decimal  "equity_min"
+    t.decimal  "equity_max"
+    t.decimal  "equity_cliff"
+    t.decimal  "equity_vest"
+    t.boolean  "remote_ok",        default: false
+    t.string   "tags",             default: [],                 array: true
+    t.integer  "company_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.text     "description"
+  end
+
+  add_index "jobs", ["company_id"], name: "index_jobs_on_company_id", using: :btree
+
   add_foreign_key "funding_rounds", "companies"
+  add_foreign_key "jobs", "companies"
 end
