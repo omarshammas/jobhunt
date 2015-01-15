@@ -10,6 +10,11 @@ FactoryGirl.define do
     description { "Long Description of Company #{name}" }
     founded_on { (rand(10) + 1).years.ago.to_date }
     headquarters "Ottawa, Canada"
+    crunchbase_url { "http://crunchbase.com/organization/company-#{n}" }
+    logo_url { 'http://placehold.it/350x150&text=logo' }
+    thumb_url { 'http://placehold.it/70X50&text=thumbnail' }
+    angellist_quality  { rand(11) }
+
 
     factory :company_with_investors do
       transient do
