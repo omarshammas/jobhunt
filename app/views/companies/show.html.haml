@@ -1,8 +1,22 @@
 
-%h1= @company.name
+%h1
+  = image_tag @company.thumb_url if @company.thumb_url
+  = @company.name
 %p
   %b Homepage url:
-  = link_to @company.homepage_url, @company.homepage_url, target: '_blank'  unless @company.homepage_url.blank?
+  = link_to @company.homepage_url, @company.homepage_url, target: '_blank' if @company.homepage_url
+%p
+  %b Logo url:
+  = link_to @company.logo_url, @company.logo_url, target: '_blank' if @company.logo_url
+%p
+  %b Thumb url:
+  = link_to @company.thumb_url, @company.thumb_url, target: '_blank' if @company.thumb_url
+%p
+  %b Crunchbase url:
+  = link_to @company.crunchbase_url, @company.crunchbase_url, target: '_blank' if @company.crunchbase_url
+%p
+  %b Angellist quality:
+  = @company.angellist_quality
 %p
   %b Is closed:
   = @company.is_closed?

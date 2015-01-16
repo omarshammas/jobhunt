@@ -1,0 +1,384 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.angel.co/1/startups/search?slug=expect-labs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - AngellistApi Ruby Gem 1.0.7
+      Authorization:
+      - Bearer b29304158eb9982acc082080c8055d292889c65afe08ad96
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 15 Jan 2015 22:45:39 GMT
+      Etag:
+      - '"cb33a8198363614640ca9bb51ea2627d"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Remaining:
+      - '1998'
+      X-Request-Id:
+      - 6b5c33241bfc2aaa53ba6388252b573f
+      X-Runtime:
+      - '0.138056'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1157'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z","crunchbase_url":"http://www.crunchbase.com/company/expect-labs","twitter_url":"https://twitter.com/expectlabs","blog_url":"http://blog.expectlabs.com/","facebook_url":"http://www.facebook.com/ExpectLabs","linkedin_url":"https://www.linkedin.com/company/expect-labs","video_url":"https://www.youtube.com/watch?v=dg3qwHVnEYs","markets":[{"id":3,"tag_type":"MarketTag","name":"mobile","display_name":"Mobile","angellist_url":"https://angel.co/mobile-2"},{"id":200,"tag_type":"MarketTag","name":"artificial
+        intelligence","display_name":"Artificial Intelligence","angellist_url":"https://angel.co/artificial-intelligence"},{"id":283,"tag_type":"MarketTag","name":"natural
+        language processing","display_name":"Natural Language Processing","angellist_url":"https://angel.co/natural-language-processing"},{"id":841,"tag_type":"MarketTag","name":"software","display_name":"Software","angellist_url":"https://angel.co/software"}],"locations":[{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"}],"company_size":"11-50","company_type":[{"id":94212,"tag_type":"CompanyTypeTag","name":"startup","display_name":"Startup","angellist_url":"https://angel.co/startup"}],"status":null,"screenshots":[{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/539/160539-f395e82f44960ef3851297903cb4069193beadff.jpg?1395432261","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/539/160539-79a714ac404ea51ba44555c302319c227794a7eb.png?1395432261"},{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/540/160540-ade1765a4c9e853753a3510334ab9647786d3243.jpg?1395364967","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/540/160540-053f88c49c6a55401e58623dc10b4d859e756c7d.png?1395364967"},{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/541/160541-8f97bd9de660d8ba7e5fab9e57c28218f8dac847.jpg?1395364968","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/541/160541-8f7548cb8686cf3068f745e52400b4158d98ace6.png?1395364968"}],"abilities":{"intro":{"can":false,"has":false}}}'
+    http_version: 
+  recorded_at: Thu, 15 Jan 2015 22:45:19 GMT
+- request:
+    method: get
+    uri: https://api.angel.co/1/startups/39141
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - AngellistApi Ruby Gem 1.0.7
+      Authorization:
+      - Bearer b29304158eb9982acc082080c8055d292889c65afe08ad96
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 15 Jan 2015 22:45:15 GMT
+      Etag:
+      - '"cb33a8198363614640ca9bb51ea2627d"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Remaining:
+      - '1997'
+      X-Request-Id:
+      - 900600630a9398b0d8c4a5fee7b9427b
+      X-Runtime:
+      - '0.180415'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1157'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z","crunchbase_url":"http://www.crunchbase.com/company/expect-labs","twitter_url":"https://twitter.com/expectlabs","blog_url":"http://blog.expectlabs.com/","facebook_url":"http://www.facebook.com/ExpectLabs","linkedin_url":"https://www.linkedin.com/company/expect-labs","video_url":"https://www.youtube.com/watch?v=dg3qwHVnEYs","markets":[{"id":3,"tag_type":"MarketTag","name":"mobile","display_name":"Mobile","angellist_url":"https://angel.co/mobile-2"},{"id":200,"tag_type":"MarketTag","name":"artificial
+        intelligence","display_name":"Artificial Intelligence","angellist_url":"https://angel.co/artificial-intelligence"},{"id":283,"tag_type":"MarketTag","name":"natural
+        language processing","display_name":"Natural Language Processing","angellist_url":"https://angel.co/natural-language-processing"},{"id":841,"tag_type":"MarketTag","name":"software","display_name":"Software","angellist_url":"https://angel.co/software"}],"locations":[{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"}],"company_size":"11-50","company_type":[{"id":94212,"tag_type":"CompanyTypeTag","name":"startup","display_name":"Startup","angellist_url":"https://angel.co/startup"}],"status":null,"screenshots":[{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/539/160539-f395e82f44960ef3851297903cb4069193beadff.jpg?1395432261","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/539/160539-79a714ac404ea51ba44555c302319c227794a7eb.png?1395432261"},{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/540/160540-ade1765a4c9e853753a3510334ab9647786d3243.jpg?1395364967","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/540/160540-053f88c49c6a55401e58623dc10b4d859e756c7d.png?1395364967"},{"thumb":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/thumb/000/160/541/160541-8f97bd9de660d8ba7e5fab9e57c28218f8dac847.jpg?1395364968","original":"https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/160/541/160541-8f7548cb8686cf3068f745e52400b4158d98ace6.png?1395364968"}],"abilities":{"intro":{"can":false,"has":false}}}'
+    http_version: 
+  recorded_at: Thu, 15 Jan 2015 22:45:20 GMT
+- request:
+    method: get
+    uri: https://api.angel.co/1/startups/39141/jobs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - AngellistApi Ruby Gem 1.0.7
+      Authorization:
+      - Bearer b29304158eb9982acc082080c8055d292889c65afe08ad96
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 15 Jan 2015 22:45:16 GMT
+      Etag:
+      - '"209fb8e9aeee4e4f827ff5ac2ee96881"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Remaining:
+      - '1996'
+      X-Request-Id:
+      - 2b74a75705c4fdbc020b93cb5dabae41
+      X-Runtime:
+      - '0.355722'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":7137,"title":"Android Engineer","description":"We are looking
+        for a talented engineer who loves building cutting-edge native apps for the
+        Android platform. Our ideal candidate will have either a strong academic background
+        or a proven track record in the industry.  We look for candidates that have
+        experience building and deploying apps on Google Play and are current with
+        both the latest Android capabilities and distribution practices.\n\nThings
+        We Look For:\n\n    B.S., M.S., or Ph.D. in Computer Science or equivalent\n    fluency
+        with Java and related frameworks\n    experience with performance optimization
+        on Android\n    strong understanding of Internet technologies and mobile development\n    familiarity
+        with visual design and user experience principles\n    strong communication
+        skills\n\n- See more at: http://www.expectlabs.com/jobs#sthash.SvLmjQYi.dpuf","created_at":"2012-10-11T02:09:57Z","updated_at":"2014-11-05T19:38:04Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.2","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":70000,"salary_max":150000,"angellist_url":"https://angel.co/expect-labs/jobs/7137-android-engineer","tags":[{"id":14780,"tag_type":"SkillTag","name":"java","display_name":"Java","angellist_url":"https://angel.co/java"},{"id":15666,"tag_type":"SkillTag","name":"mobile","display_name":"Mobile","angellist_url":"https://angel.co/mobile"},{"id":16680,"tag_type":"SkillTag","name":"android","display_name":"Android","angellist_url":"https://angel.co/android-1"},{"id":17237,"tag_type":"SkillTag","name":"mobile
+        development","display_name":"Mobile Development","angellist_url":"https://angel.co/mobile-development"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":14726,"tag_type":"RoleTag","name":"developer","display_name":"Developer","angellist_url":"https://angel.co/developer"},{"id":14739,"tag_type":"RoleTag","name":"mobile_developer","display_name":"Mobile
+        Developer","angellist_url":"https://angel.co/mobile_developer"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":7138,"title":"iOS
+        Engineer","description":"We are looking for a talented engineer who loves
+        building cutting-edge native apps for the iOS platform. Our ideal candidate
+        will have either a strong academic background or a proven track record in
+        the industry.  We look for candidates that have experience building and deploying
+        apps in the App Store and are current with both the latest iOS capabilities
+        and App Store practices.\n\nThings We Look For:\n\n    B.S., M.S., or Ph.D.
+        in Computer Science or equivalent\n    fluency with Objective-C and Cocoa\n    experience
+        with performance optimization on iOS\n    strong understanding of Internet
+        technologies and mobile development\n    familiarity with visual design and
+        user experience principles\n    strong communication skills\n\n- See more
+        at: http://www.expectlabs.com/jobs#sthash.SvLmjQYi.dpuf","created_at":"2012-10-11T02:21:02Z","updated_at":"2014-11-05T19:38:26Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.2","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":70000,"salary_max":150000,"angellist_url":"https://angel.co/expect-labs/jobs/7138-ios-engineer","tags":[{"id":14777,"tag_type":"SkillTag","name":"objective
+        c","display_name":"Objective C","angellist_url":"https://angel.co/objective-c"},{"id":17363,"tag_type":"SkillTag","name":"ios
+        development","display_name":"iOS Development","angellist_url":"https://angel.co/ios-development"},{"id":21349,"tag_type":"SkillTag","name":"facebook
+        api","display_name":"Facebook API","angellist_url":"https://angel.co/facebook-api"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":14726,"tag_type":"RoleTag","name":"developer","display_name":"Developer","angellist_url":"https://angel.co/developer"},{"id":14739,"tag_type":"RoleTag","name":"mobile_developer","display_name":"Mobile
+        Developer","angellist_url":"https://angel.co/mobile_developer"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":7139,"title":"Front-End
+        Software Engineer","description":"We are looking for a talented engineer who
+        has experience or interest in building browser-based applications and web
+        service APIs. Our ideal candidate will have either a strong academic background
+        or a proven track record in the industry. Our front-end platform relies on
+        many different technologies and components including: PHP, Javascript, jQuery,
+        HTML5, Python, Redis, NodeJS, and Git. While familiarity with any of these
+        is a plus, we value candidates who are comfortable working in a variety of
+        areas and who are eager and capable of learning new languages and technologies
+        as necessary.\n\nThings We Look For:\n\n    B.S., M.S., or Ph.D. in Computer
+        Science or equivalent\n    strong understanding of Internet technologies and
+        web development\n    experience building cross-platform, browser-based applications\n    experience
+        using and building web service API platforms\n    strong communication skills\n\n-
+        See more at: http://www.expectlabs.com/jobs#sthash.SvLmjQYi.dpuf","created_at":"2012-10-11T02:22:53Z","updated_at":"2014-11-05T19:38:47Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.2","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":70000,"salary_max":150000,"angellist_url":"https://angel.co/expect-labs/jobs/7139-front-end-software-engineer","tags":[{"id":14776,"tag_type":"SkillTag","name":"php","display_name":"PHP","angellist_url":"https://angel.co/php"},{"id":14781,"tag_type":"SkillTag","name":"javascript","display_name":"Javascript","angellist_url":"https://angel.co/javascript"},{"id":15592,"tag_type":"SkillTag","name":"html","display_name":"HTML","angellist_url":"https://angel.co/html"},{"id":15593,"tag_type":"SkillTag","name":"css","display_name":"CSS","angellist_url":"https://angel.co/css"},{"id":15594,"tag_type":"SkillTag","name":"jquery","display_name":"jQuery","angellist_url":"https://angel.co/jquery"},{"id":17000,"tag_type":"SkillTag","name":"node.js","display_name":"Node.js","angellist_url":"https://angel.co/node-js"},{"id":21691,"tag_type":"SkillTag","name":"redis","display_name":"Redis","angellist_url":"https://angel.co/redis"},{"id":78682,"tag_type":"SkillTag","name":"html/css/php/mysql","display_name":"HTML/CSS/PHP/MYSQL","angellist_url":"https://angel.co/html-css-php-mysql"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":14726,"tag_type":"RoleTag","name":"developer","display_name":"Developer","angellist_url":"https://angel.co/developer"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":7140,"title":"Back-End
+        Software Engineer","description":"We are looking for a talented engineer who
+        has experience or interest in building scalable back-end web service infrastructures.
+        Our ideal candidate will have either a strong academic background or a proven
+        track record in the industry.  Our back-end platform relies on many different
+        technologies and components including: C, C++, Python, PHP, Erlang, Redis,
+        NodeJS, WebRTC, Chef, and Git. While familiarity with any of these is a plus,
+        we value candidates who are comfortable working in a variety of areas and
+        who are eager and capable of learning new languages and technologies as necessary.\n\nThings
+        We Look For:\n\n    B.S., M.S., or Ph.D. in Computer Science or equivalent\n    strong
+        understanding of Internet technologies\n    experience building scalable computing
+        infrastructures\n    a background in distributed systems, machine learning,
+        natural language processing, artificial intelligence or related disciplines\n    strong
+        communication skills\n\n- See more at: http://www.expectlabs.com/jobs#sthash.SvLmjQYi.dpuf","created_at":"2012-10-11T02:25:02Z","updated_at":"2014-11-05T19:39:10Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.2","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":70000,"salary_max":150000,"angellist_url":"https://angel.co/expect-labs/jobs/7140-back-end-software-engineer","tags":[{"id":14775,"tag_type":"SkillTag","name":"python","display_name":"Python","angellist_url":"https://angel.co/python"},{"id":14776,"tag_type":"SkillTag","name":"php","display_name":"PHP","angellist_url":"https://angel.co/php"},{"id":15609,"tag_type":"SkillTag","name":"machine
+        learning","display_name":"Machine Learning","angellist_url":"https://angel.co/machine-learning-1"},{"id":17000,"tag_type":"SkillTag","name":"node.js","display_name":"Node.js","angellist_url":"https://angel.co/node-js"},{"id":24953,"tag_type":"SkillTag","name":"natural
+        language processing","display_name":"Natural Language Processing","angellist_url":"https://angel.co/natural-language-processing-1"},{"id":49866,"tag_type":"SkillTag","name":"chef","display_name":"Chef","angellist_url":"https://angel.co/chef"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":14726,"tag_type":"RoleTag","name":"developer","display_name":"Developer","angellist_url":"https://angel.co/developer"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":33122,"title":"Director
+        of Business Development ","description":"","created_at":"2014-07-15T22:50:59Z","updated_at":"2014-07-15T22:50:59Z","equity_cliff":"1.0","equity_min":"0.5","equity_max":"1.0","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":115000,"salary_max":150000,"angellist_url":"https://angel.co/expect-labs/jobs/33122-director-of-business-development","tags":[{"id":15525,"tag_type":"SkillTag","name":"business
+        development","display_name":"Business Development","angellist_url":"https://angel.co/business-development-1"},{"id":16083,"tag_type":"SkillTag","name":"business
+        strategy","display_name":"Business Strategy","angellist_url":"https://angel.co/business-strategy"},{"id":22998,"tag_type":"SkillTag","name":"mba","display_name":"MBA","angellist_url":"https://angel.co/mba"},{"id":31489,"tag_type":"SkillTag","name":"sales/marketing
+        and strategic partnerships","display_name":"Sales/Marketing and Strategic
+        Partnerships","angellist_url":"https://angel.co/sales-marketing-and-strategic-partnerships"},{"id":55528,"tag_type":"SkillTag","name":"business
+        development & partnerships","display_name":"Business Development & Partnerships","angellist_url":"https://angel.co/business-development-partnerships"},{"id":137201,"tag_type":"SkillTag","name":"developer
+        platforms","display_name":"Developer Platforms","angellist_url":"https://angel.co/developer-platforms"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":129175,"tag_type":"RoleTag","name":"operations","display_name":"Operations","angellist_url":"https://angel.co/operations-1"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":33123,"title":"Developer
+        Relations Manager ","description":"As our first Developer Relations Manager
+        hire, your role is to help the team establish strong relationships with developers
+        around the world in a scalable way. This includes creating samples, tutorials,
+        and documentation; connecting with developers at events, via Twitter, and
+        in online forums; and identifying and working with existing communities to
+        serve their needs and expand our reach. While scaling our efforts is important,
+        you should also be excited to work 1:1 with developers to solve problems they
+        encounter with our platform, at hackathons or online.\n\nYou should love technology
+        and trying out new products and frameworks. You should also love sharing what
+        you\u2019ve learned with the world. You should be able to speak to audiences
+        with varying levels of experience with mobile platforms, and be equally enthusiastic
+        to help large companies and individual developers build intelligent voice
+        interfaces into their apps. As the eyes and ears for our company, you should
+        also like analyzing the feedback you receive and translating it into actionable
+        product insight.\n\nAbove all, you should be enthusiastic about the future
+        of Artificial Intelligence, and enabling other developers and to be successful
+        on the MindMeld platform. \n\nResponsibilities:\n\n\u2022\tGrow adoption of
+        MindMeld\u2019s platform among developers, building developer communities
+        and defining a shared identity as \u201cMindMeld developers\u201d\n\u2022\tCreate
+        materials to help people implement our APIs and SDKs with ease, including
+        docs, blog posts, and sample apps\n\u2022\tSpeak at external events, including
+        conferences, hackathons, and meetups\n\u2022\tSynthesize and deliver product
+        insights from community interactions\n\u2022\tAct as liaison between external
+        developers and Expect Labs\u2019 Engineering teams\n\n\nQualifications: \n\n\u2022\tRegular
+        involvement in one or more meet-up groups or online developer communities\n\u2022\tBA/BS
+        or graduate degree in a technical field preferred\n\u2022\t3 + years\u2019
+        experience as a Developer Relations Manager, Technology Evangelist, or related\n","created_at":"2014-07-15T22:58:00Z","updated_at":"2014-07-15T22:58:00Z","equity_cliff":"1.0","equity_min":"0.1","equity_max":"0.5","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":80000,"salary_max":140000,"angellist_url":"https://angel.co/expect-labs/jobs/33123-developer-relations-manager","tags":[{"id":20541,"tag_type":"SkillTag","name":"product
+        evangelism","display_name":"Product Evangelism","angellist_url":"https://angel.co/product-evangelism"},{"id":25403,"tag_type":"SkillTag","name":"community
+        building","display_name":"Community Building","angellist_url":"https://angel.co/community-building"},{"id":81641,"tag_type":"SkillTag","name":"technology
+        evangelism","display_name":"Technology Evangelism","angellist_url":"https://angel.co/technology-evangelism"},{"id":86649,"tag_type":"SkillTag","name":"community
+        outreach","display_name":"Community Outreach","angellist_url":"https://angel.co/community-outreach"},{"id":111002,"tag_type":"SkillTag","name":"Developer
+        Relations","display_name":"Developer Relations","angellist_url":"https://angel.co/developer-relations"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":129175,"tag_type":"RoleTag","name":"operations","display_name":"Operations","angellist_url":"https://angel.co/operations-1"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":42124,"title":"Content
+        Marketing Manager","description":"Artificial Intelligence and Voice Activated
+        Search are two really hot areas right now, and we\u2019re looking for someone
+        to help us tell the world our story. We are seeking an experienced Content
+        Marketing Manager to actively engage fans and influencers across our various
+        social media channels. You thrive on creating engaging pieces of content that
+        drive awareness, leads, and conversion. Our ideal candidate has strong creative
+        and professional writing skills, analytic skills to track key performance
+        metrics, and a passion for tech.  \n\n\nResponsibilities:\n\n- Content Creation:
+        Plan and create daily content for Expect Labs'' company blog and social media
+        platforms. Measure and optimize the content based on analytics. Work closely
+        and collaboratively with the engineering team to write pieces and shoot short
+        videos about product features, tutorials, user profiles, and behind-the-scenes
+        glimpses of the team. \n- Social Media/Community Management: Promote content
+        on channels, build relationships, and foster developer community. Run social
+        promotions targeting developers to increase engagement and expand the community.
+        Partner with PR to manage reputation.\n- Email Marketing: Nurture relationships
+        with the developer community through email marketing. \n- Events: Attend hackathons
+        & other industry events to evangelize the MindMeld API.\n- Paid Advertising:
+        Run ad campaigns on Google AdWords, Facebook, Twitter, and other platforms.\n\n\nQualifications:\n\n-
+        Bachelor\u2019s Degree (marketing or related field preferred)\n- 3-6 years
+        of experience in a similar role\n- Experience using one or more of the following
+        tools: Google Analytics, Sprout Social, Hootsuite, Jive, and Lithium\n- Previous
+        professional examples of content creation required; blogging, writing samples
+        that speak to inspiring, member-centric storytelling\n- A deep understanding
+        of how to create SEO-friendly content\n- Familiarity with MailChimp, Photoshop,
+        basic HTML, and video editing software desired","created_at":"2014-10-27T23:26:01Z","updated_at":"2014-11-05T19:39:55Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.1","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":60000,"salary_max":100000,"angellist_url":"https://angel.co/expect-labs/jobs/42124-content-marketing-manager","tags":[{"id":14767,"tag_type":"SkillTag","name":"marketing","display_name":"Marketing","angellist_url":"https://angel.co/marketing-1"},{"id":15669,"tag_type":"SkillTag","name":"social
+        media","display_name":"Social Media","angellist_url":"https://angel.co/social-media-1"},{"id":15855,"tag_type":"SkillTag","name":"blogging","display_name":"Blogging","angellist_url":"https://angel.co/blogging"},{"id":15877,"tag_type":"SkillTag","name":"seo/sem","display_name":"SEO/SEM","angellist_url":"https://angel.co/seo-sem"},{"id":16711,"tag_type":"SkillTag","name":"writing","display_name":"Writing","angellist_url":"https://angel.co/writing"},{"id":17587,"tag_type":"SkillTag","name":"social
+        media marketing","display_name":"Social Media Marketing","angellist_url":"https://angel.co/social-media-marketing-1"},{"id":27166,"tag_type":"SkillTag","name":"content
+        marketing","display_name":"Content Marketing","angellist_url":"https://angel.co/content-marketing"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":80489,"tag_type":"RoleTag","name":"marketing","display_name":"Marketing","angellist_url":"https://angel.co/marketing-2"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}},{"id":43045,"title":"Technical
+        Recruiter ","description":"Technical Recruiter - Expect Labs\n\nHave you ever
+        been interested in scaling an early-stage start-up from the ground up? With
+        a recent round of funding under our belt, we\u2019re looking to quadruple
+        the size of our small & scrappy company over the course next year, and are
+        building a world-class talent team to help us get there.\n\nAs a Technical
+        Recruiter on our team, you will be a ninja when it comes to spotting, attracting,
+        and closing technical talent. You know the difference between a line of Java
+        and a cup of java, and have used the LinkedIn \u2018advanced search\u2019
+        function almost as much as your \u2018like\u2019 button on Facebook. This
+        position is located in our San Francisco headquarters and will report to the
+        Recruiting Manager.  \n\nRESPONSIBILITIES\n\n*Design + Execute the technical
+        recruiting strategy at Expect Labs (including  sourcing, screening, interview
+        coordination and offer negotiation)\n\n*Provide an excellent candidate experience
+        from A-Z  \n    \n*Help shape & evangelize a strong company culture that fosters
+        smarts, productivity, and a sense of humor\n\n*Strategize creative ways to
+        attract top external talent\n\n*Own and drive the debrief process for your
+        candidates\n    \n*Develop a tracking system for passive candidates\n\n*Run
+        weekly analytics\n    \n*Own programs/projects and plan recruiting related
+        events (career fairs, developer conferences, tech meetups)\n\n*Work closely
+        with Recruiting Manager to lead the recruiting organization to improve and
+        scale processes\n\nREQUIREMENTS\n\n    2+ years of technology recruiting experience
+        required\n    Bachelors degree preferred\n    Recruiting in a high growth
+        and fast-paced start up environment\n    Enjoy building relationships with
+        Software Engineers in the Bay Area\n    Strong communication and interpersonal
+        skills\n    You think intelligent voice search is extremely cool, and can\u2019t
+        wait to hire the right people to build out our vision\n    You have a keen
+        eye for technical talent, if you do say so yourself\n","created_at":"2014-11-05T19:36:36Z","updated_at":"2014-11-05T19:36:36Z","equity_cliff":"1.0","equity_min":"0.05","equity_max":"0.1","equity_vest":"4.0","currency_code":"USD","job_type":"full-time","salary_min":90000,"salary_max":125000,"angellist_url":"https://angel.co/expect-labs/jobs/43045-technical-recruiter","tags":[{"id":17136,"tag_type":"SkillTag","name":"sourcing","display_name":"Sourcing","angellist_url":"https://angel.co/sourcing"},{"id":20372,"tag_type":"SkillTag","name":"interviewing","display_name":"Interviewing","angellist_url":"https://angel.co/interviewing"},{"id":78472,"tag_type":"SkillTag","name":"start-ups","display_name":"Start-Ups","angellist_url":"https://angel.co/start-ups"},{"id":98804,"tag_type":"SkillTag","name":"technical
+        screening","display_name":"Technical Screening","angellist_url":"https://angel.co/technical-screening-1"},{"id":1692,"tag_type":"LocationTag","name":"san
+        francisco","display_name":"San Francisco","angellist_url":"https://angel.co/san-francisco"},{"id":103479,"tag_type":"RoleTag","name":"human_resources","display_name":"Human
+        Resources","angellist_url":"https://angel.co/human_resources"}],"remote_ok":false,"startup":{"id":39141,"hidden":false,"community_profile":false,"name":"Expect
+        Labs","angellist_url":"https://angel.co/expect-labs","logo_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-medium_jpg.jpg?buster=1349907202","thumb_url":"https://d1qb2nb5cznatu.cloudfront.net/startups/i/39141-2a03ea2dda37a310d0226b4702a1069a-thumb_jpg.jpg?buster=1349907202","quality":9,"product_desc":"We
+        are the creators of the MindMeld app and API. The MindMeld API is an advanced
+        developer platform and cloud-based service to power a new generation of intelligent
+        voice interfaces.","high_concept":"Technology to power a new generation of
+        intelligent voice experiences","follower_count":379,"company_url":"http://www.expectlabs.com/","created_at":"2012-01-18T00:54:21Z","updated_at":"2014-11-12T23:20:11Z"}}]'
+    http_version: 
+  recorded_at: Thu, 15 Jan 2015 22:45:21 GMT
+recorded_with: VCR 2.9.3

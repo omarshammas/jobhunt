@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :company do
     transient do
       sequence(:n) { |n| n }
@@ -10,6 +11,11 @@ FactoryGirl.define do
     description { "Long Description of Company #{name}" }
     founded_on { (rand(10) + 1).years.ago.to_date }
     headquarters "Ottawa, Canada"
+    crunchbase_url { "http://crunchbase.com/organization/company-#{n}" }
+    logo_url { 'http://placehold.it/350x150&text=logo' }
+    thumb_url { 'http://placehold.it/70X50&text=thumbnail' }
+    angellist_quality  { rand(11) }
+
 
     factory :company_with_investors do
       transient do
@@ -42,5 +48,25 @@ FactoryGirl.define do
       sequence(:n) { |n| n }
     end
     name { "Investor #{n}" }
+  end
+
+  factory :job do
+    transient do
+      sequence(:n) { |n| n }
+    end
+    company
+    title { "Software Developer #{n}" }
+    angellist_job_id { n }
+    description { "Description #{n}" }
+    job_type "full-time"
+    salary_min 100000
+    salary_max 120000
+    currency_code "USD"
+    equity_min 0.1
+    equity_max 0.5
+    equity_cliff 1.0
+    equity_vest 6.0
+    remote_ok false
+    tags ["coffeescript", "ruby on rails"]
   end
 end

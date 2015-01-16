@@ -13,8 +13,6 @@ class CrunchbaseCompanyWorker
     end
   end
 
-  # TODO - remove adelphic just used for
-  # testing purposes now
   def perform(company_name)
     company = Company.find_by(name: company_name)
     # if it exists skip it, even though we should update it
@@ -61,6 +59,7 @@ class CrunchbaseCompanyWorker
     end
 
     company.save!
+    AngellistStartupWorker.perform_async(company_name)
   end
 
 end
