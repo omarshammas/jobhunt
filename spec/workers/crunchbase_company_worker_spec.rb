@@ -12,5 +12,6 @@ RSpec.describe CrunchbaseCompanyWorker do
     company = Company.last
     expect(company.funding_rounds.size).to eq(4)
     expect(company.investors.size).to eq(13)
+    expect(AngellistStartupWorker.jobs.size).to eq(1)
   end
 end

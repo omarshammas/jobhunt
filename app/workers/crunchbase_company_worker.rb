@@ -47,6 +47,7 @@ class CrunchbaseCompanyWorker
     end
 
     company.save!
+    AngellistStartupWorker.perform_async(company_name)
   end
 
 end
