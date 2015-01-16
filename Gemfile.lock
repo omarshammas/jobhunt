@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/omarshammas/crunchbase_v2.git
-  revision: 3b509c64c5c26a2adf8993c76de39730ce9b85eb
+  revision: 732b565995d512e9f537bd975a9d3ca6962798b1
   specs:
     crunchbase_v2 (0.0.8)
 
