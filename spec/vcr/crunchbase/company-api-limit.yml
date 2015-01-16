@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crunchbase.com/v/2/organization/expect-labs?user_key=<CRUNCHBASE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - text/html; charset=us-ascii
+      Date:
+      - Fri, 16 Jan 2015 05:01:22 GMT
+      Server:
+      - openresty
+      Content-Length:
+      - '1201'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD
+        XHTML 1.0 Strict//EN\"\n \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n
+        \ <head>\n\t<title>API Unauthorized</title>\n\t<style>html, body {margin:
+        0; padding: 0; min-height: 100%; font-family: helvetica; background-color:
+        #eaeaea; color: #333;} a {color: #2992a7; text-decoration: none; font-weight:
+        600;}</style>\n  </head>\n  <body>\n\t<div style='margin: 0; padding: 0; background:
+        #333333; width: 100%; height: 50px; top: 0; position: fixed; border-bottom:
+        1px solid #fcfcfc; box-shadow: 0 1px 1px rgba(3,3,3,0.3);'></div>\n\t<div
+        style='margin-top: 65px; padding-left: 20px;'>\n\t  <h1>Crunch<span style='color:
+        #3C8C9D'>Base</span></h1>\n\t  <h2>API Authorization / Rate Limit Error</h2>\n\t
+        \ <p>Your request has failed due to one of the following errors:</p>\n\t  <p>1
+        - You failed to provide a user_key</p>\n\t  <p>2 - The user_key provided is
+        invalid or unauthorized</p>\n\t  <p>3 - The user_key provided has exceeded
+        its daily, monthly, or total quota</p>\n\t  <p>if you believe you've reached
+        this page in error, please contact <a href=\"mailto:api@crunchbase.com\">api@crunchbase.com</a>
+        for support.</p>\n\t</div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Fri, 16 Jan 2015 04:58:50 GMT
+recorded_with: VCR 2.9.3

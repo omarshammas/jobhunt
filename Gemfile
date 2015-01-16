@@ -44,6 +44,7 @@ gem 'unicorn'
 #gem 'crunchbase_v2', '0.0.8'
 gem 'crunchbase_v2', git: 'https://github.com/omarshammas/crunchbase_v2.git'
 gem 'angellist_api', '1.0.7'
+gem 'redis', '~> 3.2.0'
 
 # sidekiq monitoring
 # if you require 'sinatra' you get the DSL extended to Object
@@ -71,6 +72,8 @@ group :test do
   gem 'poltergeist', '~> 1.5.1'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock', '~> 1.20.4'
+  gem 'fakeredis', '~> 0.5.0'
+  gem 'rspec-sidekiq', '~> 2.0.0'
 end
 
 # deployment on heroku

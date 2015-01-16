@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.crunchbase.com/v/2/organization/expect-labs?user_key=<CRUNCHBASE_API_KEY>
+    uri: https://api.crunchbase.com/v/2/organization/expect-labs?user_key=<CRUNCHBASE_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -23,27 +23,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 12 Jan 2015 21:32:39 GMT
+      - Fri, 16 Jan 2015 07:14:03 GMT
       Pragma:
       - no-cache
       Server:
       - openresty
       Status:
       - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
       Vary:
       - X-Requested-With
       X-Cache:
-      - HIT - 3
+      - HIT - 13
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - cb9942be-8c03-4e96-b434-b9eb04d7090e
+      - 8985f247-f818-44b7-ab08-5871883a2fd5
       X-Run-Esi:
       - 'true'
       X-Runtime:
-      - '2.327191'
+      - '3.248740'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
@@ -58,39 +60,39 @@ http_interactions:
         {
           "metadata": {
             "version": 2,
-            "www_path_prefix": "http://www.crunchbase.com/",
-            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "www_path_prefix": "https://www.crunchbase.com/",
+            "api_path_prefix": "https://api.crunchbase.com/v/2/",
             "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
           },
           "data": {
             "uuid": "4257c5971cbd60d370e58e58f2629c11",
             "type": "Organization",
             "properties": {
-              "secondary_role_for_profit": true,
               "role_company": true,
-              "short_description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences.",
               "permalink": "expect-labs",
               "primary_role": "company",
+              "is_closed": false,
               "closed_on_trust_code": 0,
               "name": "Expect Labs",
+              "description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences for any app, device or website. Companies use this platform to create voice-driven assistants that understand what users say and automatically find the information they need before they have to type a search query. Expect Labs has been widely recognized as a leader in the field of anticipatory computing and was named by MIT Technology Review as one of the world&#39;s &quot;50 Smartest Companies&quot; of 2014. Developers can learn more and start building intelligent, voice-driven apps for free at developer.expectlabs.com.\n",
+              "short_description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences.",
+              "homepage_url": "http://expectlabs.com",
+              "closed_on_day": null,
+              "closed_on_month": null,
+              "closed_on_year": null,
+              "closed_on": null,
+              "email_address": "info@expectlabs.com",
               "founded_on_day": 1,
               "founded_on_month": 1,
               "founded_on_year": 2011,
               "founded_on": "2011-01-01",
               "founded_on_trust_code": 4,
-              "is_closed": false,
-              "description": "Expect Labs is the creator of the MindMeld API, the first developer platform capable of powering intelligent voice experiences for any app, device or website. Companies use this platform to create voice-driven assistants that understand what users say and automatically find the information they need before they have to type a search query. Expect Labs has been widely recognized as a leader in the field of anticipatory computing and was named by MIT Technology Review as one of the world&#39;s &quot;50 Smartest Companies&quot; of 2014. Developers can learn more and start building intelligent, voice-driven apps for free at developer.expectlabs.com.\n",
-              "closed_on_day": null,
-              "closed_on_month": null,
-              "closed_on_year": null,
-              "closed_on": null,
-              "num_employees_max": 50,
               "num_employees_min": 11,
+              "num_employees_max": 50,
+              "secondary_role_for_profit": true,
               "num_employees_range": null,
-              "homepage_url": "http://expectlabs.com",
-              "email_address": "info@expectlabs.com",
               "created_at": 1342142595,
-              "updated_at": 1418907603,
+              "updated_at": 1421262678,
               "total_funding_usd": 15400000,
               "number_of_investments": 0
             },
@@ -98,7 +100,7 @@ http_interactions:
               "past_team": {
                 "paging": {
                   "total_items": 6,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/past_team",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/past_team",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -167,7 +169,7 @@ http_interactions:
               "board_members_and_advisors": {
                 "paging": {
                   "total_items": 2,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/board_members_and_advisors",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/board_members_and_advisors",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -194,7 +196,7 @@ http_interactions:
               "current_team": {
                 "paging": {
                   "total_items": 10,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/current_team",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/current_team",
                   "sort_order": "custom"
                 },
                 "items": [
@@ -250,7 +252,7 @@ http_interactions:
                     "started_on": "2011-01-01",
                     "path": "person/tim-tuttle",
                     "created_at": 1347054470,
-                    "updated_at": 1397989105
+                    "updated_at": 1421264030
                   },
                   {
                     "first_name": "Stephanie",
@@ -275,7 +277,7 @@ http_interactions:
               "competitors": {
                 "paging": {
                   "total_items": 3,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/competitors",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/competitors",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -298,14 +300,14 @@ http_interactions:
                     "name": "Swiftype",
                     "path": "organization/swiftype",
                     "created_at": 1336637886,
-                    "updated_at": 1418929103
+                    "updated_at": 1421363725
                   }
                 ]
               },
               "offices": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/offices",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/offices",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -331,7 +333,7 @@ http_interactions:
               "headquarters": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/headquarters",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/headquarters",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -357,7 +359,7 @@ http_interactions:
               "funding_rounds": {
                 "paging": {
                   "total_items": 4,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/funding_rounds",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/funding_rounds",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -394,7 +396,7 @@ http_interactions:
               "categories": {
                 "paging": {
                   "total_items": 9,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/categories",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/categories",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -412,7 +414,7 @@ http_interactions:
                     "uuid": "c4d8caf35fe7359bf9f22d708378e4ee",
                     "path": "category/artificial intelligence/c4d8caf35fe7359bf9f22d708378e4ee",
                     "created_at": 1397980728,
-                    "updated_at": 1420786315
+                    "updated_at": 1421365278
                   },
                   {
                     "type": "Category",
@@ -420,7 +422,7 @@ http_interactions:
                     "uuid": "bb1777e525f3b9f2922b0d5defe0d5bb",
                     "path": "category/semantic search/bb1777e525f3b9f2922b0d5defe0d5bb",
                     "created_at": 1397980727,
-                    "updated_at": 1419891180
+                    "updated_at": 1421149018
                   },
                   {
                     "type": "Category",
@@ -428,7 +430,7 @@ http_interactions:
                     "uuid": "0d39287e5b1377a6970274294daded43",
                     "path": "category/search/0d39287e5b1377a6970274294daded43",
                     "created_at": 1397980727,
-                    "updated_at": 1421018436
+                    "updated_at": 1421343336
                   },
                   {
                     "type": "Category",
@@ -436,7 +438,7 @@ http_interactions:
                     "uuid": "af3332489c7e50c5168ae91b86595a17",
                     "path": "category/apps/af3332489c7e50c5168ae91b86595a17",
                     "created_at": 1397980727,
-                    "updated_at": 1421036246
+                    "updated_at": 1421359710
                   },
                   {
                     "type": "Category",
@@ -444,7 +446,7 @@ http_interactions:
                     "uuid": "5ea0cdb7c9a647fc50f8c9b0fac04863",
                     "path": "category/machine learning/5ea0cdb7c9a647fc50f8c9b0fac04863",
                     "created_at": 1397980727,
-                    "updated_at": 1421002732
+                    "updated_at": 1421345608
                   },
                   {
                     "type": "Category",
@@ -452,7 +454,7 @@ http_interactions:
                     "uuid": "c757026ee5818e384d66184fb060aefd",
                     "path": "category/i-pad/c757026ee5818e384d66184fb060aefd",
                     "created_at": 1397980727,
-                    "updated_at": 1420610177
+                    "updated_at": 1421256790
                   },
                   {
                     "type": "Category",
@@ -460,14 +462,14 @@ http_interactions:
                     "uuid": "c08b5441a05b9777b7a6012728caddd9",
                     "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
                     "created_at": 1397980727,
-                    "updated_at": 1421037545
+                    "updated_at": 1421356156
                   }
                 ]
               },
               "founders": {
                 "paging": {
                   "total_items": 3,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/founders",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/founders",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -476,7 +478,7 @@ http_interactions:
                     "name": "Tim Tuttle",
                     "path": "person/tim-tuttle",
                     "created_at": 1347054470,
-                    "updated_at": 1397989105
+                    "updated_at": 1421264030
                   },
                   {
                     "type": "Person",
@@ -497,7 +499,7 @@ http_interactions:
               "products": {
                 "paging": {
                   "total_items": 2,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/products",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/products",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -520,7 +522,7 @@ http_interactions:
               "primary_image": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/primary_image",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/primary_image",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -536,7 +538,7 @@ http_interactions:
               "images": {
                 "paging": {
                   "total_items": 2,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/images",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/images",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -559,7 +561,7 @@ http_interactions:
               "websites": {
                 "paging": {
                   "total_items": 7,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/websites",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/websites",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -617,7 +619,7 @@ http_interactions:
               "news": {
                 "paging": {
                   "total_items": 63,
-                  "first_page_url": "http://api.crunchbase.com/v/2/organization/expect-labs/news",
+                  "first_page_url": "https://api.crunchbase.com/v/2/organization/expect-labs/news",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -699,10 +701,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 12 Jan 2015 21:30:13 GMT
+  recorded_at: Fri, 16 Jan 2015 07:11:31 GMT
 - request:
     method: get
-    uri: http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04?user_key=<CRUNCHBASE_API_KEY>
+    uri: https://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04?user_key=<CRUNCHBASE_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -723,27 +725,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 12 Jan 2015 21:33:08 GMT
+      - Fri, 16 Jan 2015 07:14:04 GMT
       Pragma:
       - no-cache
       Server:
       - openresty
       Status:
       - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
       Vary:
       - X-Requested-With
       X-Cache:
-      - MISS
+      - HIT - 16
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - c8e64d52-8d84-41cd-a71b-95738b00743e
+      - 54ee60ea-a7f1-4671-aafd-cd6f2f75587e
       X-Run-Esi:
       - 'true'
       X-Runtime:
-      - '0.880482'
+      - '0.780241'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
@@ -758,31 +762,31 @@ http_interactions:
         {
           "metadata": {
             "version": 2,
-            "www_path_prefix": "http://www.crunchbase.com/",
-            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "www_path_prefix": "https://www.crunchbase.com/",
+            "api_path_prefix": "https://api.crunchbase.com/v/2/",
             "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
           },
           "data": {
             "uuid": "1996572821477c18c003cac18a638b04",
             "type": "FundingRound",
             "properties": {
+              "target_money_raised_currency_code": "USD",
+              "post_money_valuation_currency_code": "USD",
               "funding_type": "venture",
+              "money_raised_usd": 13000000,
               "announced_on_year": 2014,
               "announced_on_day": 18,
               "announced_on_month": 12,
               "announced_on": "2014-12-18",
               "announced_on_trust_code": 7,
               "canonical_currency_code": "USD",
+              "money_raised": 13000000,
               "money_raised_currency_code": "USD",
               "permalink": "1996572821477c18c003cac18a638b04",
               "name": "Expect Labs Funding Round",
-              "money_raised": 13000000,
-              "target_money_raised_currency_code": "USD",
-              "target_money_raised": null,
-              "post_money_valuation_currency_code": "USD",
-              "money_raised_usd": 13000000,
               "series": "A",
               "post_money_valuation": null,
+              "target_money_raised": null,
               "created_at": 1418907602,
               "updated_at": 1418959946
             },
@@ -790,7 +794,7 @@ http_interactions:
               "investments": {
                 "paging": {
                   "total_items": 11,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/investments",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/investments",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -920,7 +924,7 @@ http_interactions:
               "funded_organization": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/funded_organization",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/funded_organization",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -929,14 +933,14 @@ http_interactions:
                     "name": "Expect Labs",
                     "path": "organization/expect-labs",
                     "created_at": 1342142595,
-                    "updated_at": 1418907603
+                    "updated_at": 1421262678
                   }
                 ]
               },
               "news": {
                 "paging": {
                   "total_items": 2,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/news",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/1996572821477c18c003cac18a638b04/news",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -964,10 +968,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 12 Jan 2015 21:30:14 GMT
+  recorded_at: Fri, 16 Jan 2015 07:11:31 GMT
 - request:
     method: get
-    uri: http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd?user_key=<CRUNCHBASE_API_KEY>
+    uri: https://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd?user_key=<CRUNCHBASE_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -988,33 +992,35 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 12 Jan 2015 21:33:09 GMT
+      - Fri, 16 Jan 2015 07:14:33 GMT
       Pragma:
       - no-cache
       Server:
       - openresty
       Status:
       - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
       Vary:
       - X-Requested-With
       X-Cache:
-      - MISS
+      - HIT - 14
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 5db28a1d-7bcd-41d8-87bb-89ce18563ebf
+      - 3f5d5117-1e71-4b43-b269-6827ed1c3a57
       X-Run-Esi:
       - 'true'
       X-Runtime:
-      - '0.267127'
+      - '0.330363'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '783'
+      - '781'
       Connection:
       - keep-alive
     body:
@@ -1023,8 +1029,8 @@ http_interactions:
         {
           "metadata": {
             "version": 2,
-            "www_path_prefix": "http://www.crunchbase.com/",
-            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "www_path_prefix": "https://www.crunchbase.com/",
+            "api_path_prefix": "https://api.crunchbase.com/v/2/",
             "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
           },
           "data": {
@@ -1049,7 +1055,7 @@ http_interactions:
               "investments": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/investments",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/investments",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1069,7 +1075,7 @@ http_interactions:
               "funded_organization": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/funded_organization",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/funded_organization",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1078,14 +1084,14 @@ http_interactions:
                     "name": "Expect Labs",
                     "path": "organization/expect-labs",
                     "created_at": 1342142595,
-                    "updated_at": 1418907603
+                    "updated_at": 1421262678
                   }
                 ]
               },
               "news": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/news",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/7b29c382755f7d7df596c4b148ecd1fd/news",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1104,10 +1110,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 12 Jan 2015 21:30:16 GMT
+  recorded_at: Fri, 16 Jan 2015 07:11:32 GMT
 - request:
     method: get
-    uri: http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75?user_key=<CRUNCHBASE_API_KEY>
+    uri: https://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75?user_key=<CRUNCHBASE_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -1128,27 +1134,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 12 Jan 2015 21:32:43 GMT
+      - Fri, 16 Jan 2015 07:14:34 GMT
       Pragma:
       - no-cache
       Server:
       - openresty
       Status:
       - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
       Vary:
       - X-Requested-With
       X-Cache:
-      - MISS
+      - HIT - 14
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 7c8649fc-1c0f-4a82-978f-a3bddad18c34
+      - 5766af6d-de6e-4d36-a927-b5593b41c11a
       X-Run-Esi:
       - 'true'
       X-Runtime:
-      - '0.840154'
+      - '0.499933'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
@@ -1163,14 +1171,15 @@ http_interactions:
         {
           "metadata": {
             "version": 2,
-            "www_path_prefix": "http://www.crunchbase.com/",
-            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "www_path_prefix": "https://www.crunchbase.com/",
+            "api_path_prefix": "https://api.crunchbase.com/v/2/",
             "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
           },
           "data": {
             "uuid": "4a770441d10fa72348e3f49edab05b75",
             "type": "FundingRound",
             "properties": {
+              "post_money_valuation_currency_code": "USD",
               "funding_type": "convertible_note",
               "announced_on_year": 2013,
               "announced_on_day": 22,
@@ -1181,7 +1190,6 @@ http_interactions:
               "money_raised_currency_code": "USD",
               "permalink": "4a770441d10fa72348e3f49edab05b75",
               "name": "Expect Labs raises 0 in convertible_note round",
-              "post_money_valuation_currency_code": "USD",
               "created_at": 1367444984,
               "updated_at": 1398010036
             },
@@ -1189,7 +1197,7 @@ http_interactions:
               "investments": {
                 "paging": {
                   "total_items": 6,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/investments",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/investments",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1264,7 +1272,7 @@ http_interactions:
               "funded_organization": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/funded_organization",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/funded_organization",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1273,14 +1281,14 @@ http_interactions:
                     "name": "Expect Labs",
                     "path": "organization/expect-labs",
                     "created_at": 1342142595,
-                    "updated_at": 1418907603
+                    "updated_at": 1421262678
                   }
                 ]
               },
               "news": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/news",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/4a770441d10fa72348e3f49edab05b75/news",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1299,10 +1307,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 12 Jan 2015 21:30:17 GMT
+  recorded_at: Fri, 16 Jan 2015 07:11:32 GMT
 - request:
     method: get
-    uri: http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d?user_key=<CRUNCHBASE_API_KEY>
+    uri: https://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d?user_key=<CRUNCHBASE_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -1323,27 +1331,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 12 Jan 2015 21:33:10 GMT
+      - Fri, 16 Jan 2015 07:14:34 GMT
       Pragma:
       - no-cache
       Server:
       - openresty
       Status:
       - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
       Vary:
       - X-Requested-With
       X-Cache:
-      - HIT - 1
+      - HIT - 14
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 6caad779-9248-46f2-a91c-56b5b7b05dbd
+      - 1f02e16d-3cf0-49d7-a938-c69759e4416b
       X-Run-Esi:
       - 'true'
       X-Runtime:
-      - '0.709513'
+      - '0.711788'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
@@ -1358,27 +1368,27 @@ http_interactions:
         {
           "metadata": {
             "version": 2,
-            "www_path_prefix": "http://www.crunchbase.com/",
-            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "www_path_prefix": "https://www.crunchbase.com/",
+            "api_path_prefix": "https://api.crunchbase.com/v/2/",
             "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
           },
           "data": {
             "uuid": "a9912fbb4cb11a894fc8e50a9c78c76d",
             "type": "FundingRound",
             "properties": {
-              "post_money_valuation_currency_code": "USD",
               "funding_type": "venture",
-              "money_raised_usd": 2400000,
               "announced_on_year": 2012,
               "announced_on_day": 4,
               "announced_on_month": 10,
               "announced_on": "2012-10-04",
               "announced_on_trust_code": 7,
               "canonical_currency_code": "USD",
-              "money_raised": 2400000,
               "money_raised_currency_code": "USD",
               "permalink": "a9912fbb4cb11a894fc8e50a9c78c76d",
               "name": "Expect Labs raises 2400000 in unknown round",
+              "money_raised_usd": 2400000,
+              "money_raised": 2400000,
+              "post_money_valuation_currency_code": "USD",
               "created_at": 1349421336,
               "updated_at": 1415306091
             },
@@ -1386,7 +1396,7 @@ http_interactions:
               "investments": {
                 "paging": {
                   "total_items": 7,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/investments",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/investments",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1472,7 +1482,7 @@ http_interactions:
               "funded_organization": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/funded_organization",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/funded_organization",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1481,14 +1491,14 @@ http_interactions:
                     "name": "Expect Labs",
                     "path": "organization/expect-labs",
                     "created_at": 1342142595,
-                    "updated_at": 1418907603
+                    "updated_at": 1421262678
                   }
                 ]
               },
               "news": {
                 "paging": {
                   "total_items": 1,
-                  "first_page_url": "http://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/news",
+                  "first_page_url": "https://api.crunchbase.com/v/2/funding-round/a9912fbb4cb11a894fc8e50a9c78c76d/news",
                   "sort_order": "created_at DESC"
                 },
                 "items": [
@@ -1507,5 +1517,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 12 Jan 2015 21:30:17 GMT
+  recorded_at: Fri, 16 Jan 2015 07:11:33 GMT
 recorded_with: VCR 2.9.3

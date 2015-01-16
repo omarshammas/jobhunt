@@ -6,7 +6,8 @@ RSpec.describe CrunchbaseInvestorWorker do
     VCR.use_cassette('crunchbase/investor-google-ventures') do
       worker = CrunchbaseInvestorWorker.new
       worker.perform('Google Ventures')
-      expect(CrunchbaseCompanyWorker.jobs.size).to eq(321)
+      expect(CrunchbaseCompanyWorker.jobs.size).to eq(324)
     end
   end
+
 end

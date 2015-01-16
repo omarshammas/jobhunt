@@ -16,4 +16,12 @@ RSpec.configure do |config|
     end
   end
 
- end
+end
+
+RSpec::Sidekiq.configure do |config|
+
+  # rspec-sidekiq features, we don't want warnings
+  # we know the jobs are being stored in array instead of redis
+  config.warn_when_jobs_not_processed_by_sidekiq = false
+
+end

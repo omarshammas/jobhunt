@@ -20,6 +20,12 @@ class CrunchbaseCompanyWorker
     # it for now
     return if company
 
+    # wait for the next batch cycle
+    if api_limit_reached?
+      schedule_in_next_batch(company_name)
+      return
+    end
+
     company_permalink = company_name.downcase.gsub(' ', '-')
     cb_company = Crunchbase::Organization.get company_permalink
 
@@ -60,6 +66,40 @@ class CrunchbaseCompanyWorker
 
     company.save!
     AngellistStartupWorker.perform_async(company_name)
+  rescue Net::HTTPServerException # we've hit our api limit
+    set_api_limit_reached
+    schedule_in_next_batch company_name
+  rescue Crunchbase::CrunchException => e
+    # TODO - ignore and move on only if it is a 404 when a company is not found
+    # but for now we're ignoring everything because
+    # e.code does not exists and instead we must eval(e.message).code
+    # and I'm not trying to run unknown code from crunchbase on the server
+
+    # raise e unless e.code == '404'
+  end
+
+private
+
+  # rate limits
+  # - 50 Calls Per Min
+  # - 2500 Calls Per Day
+  # - 25000 Calls Per Month
+  def set_api_limit_reached
+    redis.set 'crunchbase-limit-hit', DateTime.now.to_s
+  end
+
+  def api_limit_reached?
+    datetime_string = redis.get 'crunchbase-limit-hit'
+    return false if datetime_string.blank?
+    DateTime.now - DateTime.parse(datetime_string) <= 60
+  end
+
+  def redis
+    @redis ||= Redis.new url: Rails.application.secrets.redis_url
+  end
+
+  def schedule_in_next_batch company_name
+    CrunchbaseCompanyWorker.perform_in(1.minutes, company_name)
   end
 
 end
