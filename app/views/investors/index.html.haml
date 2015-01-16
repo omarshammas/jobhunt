@@ -1,6 +1,5 @@
-%h1 Listing Investors
-
+%h1= "#{@investors.size} Investors"
 = render partial: 'table', locals: { investors: @investors }
-%br
 
+%br
 = link_to 'New Investor', new_investor_path, class: 'btn btn-primary'

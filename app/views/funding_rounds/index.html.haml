@@ -1,4 +1,4 @@
-%h1 Listing Funding Rounds
+%h1= "#{@funding_rounds.size} Funding Rounds"
 = render partial: 'table', locals: { funding_rounds: @funding_rounds }
 
 %br
