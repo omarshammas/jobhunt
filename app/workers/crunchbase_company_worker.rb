@@ -103,7 +103,7 @@ private
       datetime_string = conn.get 'crunchbase-limit-hit'
     end
     return false if datetime_string.blank?
-    DateTime.now - DateTime.parse(datetime_string) <= 60
+    (DateTime.now.to_f - DateTime.parse(datetime_string).to_f) <= 60
   end
 
   def schedule_in_next_batch company_name
