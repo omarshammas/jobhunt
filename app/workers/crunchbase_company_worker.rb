@@ -85,17 +85,18 @@ private
   # - 2500 Calls Per Day
   # - 25000 Calls Per Month
   def set_api_limit_reached
-    redis.set 'crunchbase-limit-hit', DateTime.now.to_s
+    Sidekiq.redis do |conn|
+      conn.set 'crunchbase-limit-hit', DateTime.now.to_s
+    end
   end
 
   def api_limit_reached?
-    datetime_string = redis.get 'crunchbase-limit-hit'
+    datetime_string = nil
+    Sidekiq.redis do |conn|
+      datetime_string = conn.get 'crunchbase-limit-hit'
+    end
     return false if datetime_string.blank?
     DateTime.now - DateTime.parse(datetime_string) <= 60
-  end
-
-  def redis
-    @redis ||= Redis.new url: Rails.application.secrets.redis_url
   end
 
   def schedule_in_next_batch company_name

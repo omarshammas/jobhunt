@@ -27,7 +27,6 @@ RSpec.describe CrunchbaseCompanyWorker do
   end
 
   describe 'hit the api limits' do
-    let(:redis) { Redis.new }
     before(:each) do
       expect(Company.count).to eq(0)
       expect(CrunchbaseCompanyWorker.jobs.size).to eq(0)
@@ -36,17 +35,17 @@ RSpec.describe CrunchbaseCompanyWorker do
       # no vcr, because it shouldn't make any requests
       # job should reschedule itself immediately
       datetime_string = DateTime.now.to_s
-      redis.set 'crunchbase-limit-hit', datetime_string
+      set_redis 'crunchbase-limit-hit', datetime_string
       CrunchbaseCompanyWorker.new.perform('Expect Labs')
-      expect(redis.get('crunchbase-limit-hit')).to eq(datetime_string)
+      expect(get_redis('crunchbase-limit-hit')).to eq(datetime_string)
     end
     it 'during the job' do
-      expect(redis.get('crunchbase-limit-hit')).to be nil
+      expect(get_redis('crunchbase-limit-hit')).to be nil
       VCR.use_cassette('crunchbase/company-api-limit') do
         worker = CrunchbaseCompanyWorker.new
         worker.perform('Expect Labs')
       end
-      datetime_string = redis.get('crunchbase-limit-hit')
+      datetime_string = get_redis('crunchbase-limit-hit')
       expect(DateTime.now - DateTime.parse(datetime_string)).to be < 10
     end
     after(:each) do
