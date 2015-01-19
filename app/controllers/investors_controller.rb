@@ -5,6 +5,7 @@ class InvestorsController < ApplicationController
   # GET /investors.json
   def index
     @investors = Investor.order(:name)
+                         .paginate(page: params[:page])
   end
 
   # GET /investors/1

@@ -4,7 +4,8 @@ class FundingRoundsController < ApplicationController
   # GET /funding_rounds
   # GET /funding_rounds.json
   def index
-    @funding_rounds = FundingRound.all
+    @funding_rounds = FundingRound.order(announced_on: :desc)
+                                  .paginate(page: params[:page])
   end
 
   # GET /funding_rounds/1

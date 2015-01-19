@@ -1,5 +1,8 @@
-%h1= "#{@companies.size} Companies"
+%h1= "#{@companies.count} Companies"
+
+= will_paginate @companies
 = render partial: 'table', locals: { companies: @companies }
+= will_paginate @companies
 
 %br
 = link_to 'New Company', new_company_path, class: 'btn btn-primary'

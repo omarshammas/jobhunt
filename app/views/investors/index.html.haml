@@ -1,5 +1,8 @@
-%h1= "#{@investors.size} Investors"
+%h1= "#{@investors.count} Investors"
+
+= will_paginate @investors
 = render partial: 'table', locals: { investors: @investors }
+= will_paginate @investors
 
 %br
 = link_to 'New Investor', new_investor_path, class: 'btn btn-primary'

@@ -46,6 +46,8 @@ gem 'crunchbase_v2', git: 'https://github.com/omarshammas/crunchbase_v2.git'
 gem 'angellist_api', '1.0.7'
 gem 'redis', '~> 3.2.0'
 
+gem 'will_paginate', '~> 3.0.7'
+
 # sidekiq monitoring
 # if you require 'sinatra' you get the DSL extended to Object
 gem 'sinatra', require: nil
