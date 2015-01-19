@@ -12,6 +12,8 @@
 !/log/.keep
 /tmp
 
+/certs
+
 # Ignore application configuration
 /config/application.yml
 
