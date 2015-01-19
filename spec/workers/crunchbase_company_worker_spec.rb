@@ -12,6 +12,9 @@ RSpec.describe CrunchbaseCompanyWorker do
     company = Company.last
     expect(company.funding_rounds.size).to eq(4)
     expect(company.investors.size).to eq(13)
+    expect(company.is_acquired).to be false
+    expect(company.acquired_on).to be nil
+    expect(company.acquired_by).to eq('')
     expect(AngellistStartupWorker.jobs.size).to eq(1)
     expect(AngellistStartupWorker).to have_enqueued_job('Expect Labs')
   end
@@ -24,6 +27,17 @@ RSpec.describe CrunchbaseCompanyWorker do
 
     expect(Company.count).to eq(0)
     expect(AngellistStartupWorker.jobs.size).to eq(0)
+  end
+
+  it 'sets the acquired by attributes if the company was acquired' do
+    VCR.use_cassette('crunchbase/company-acquired') do
+      CrunchbaseCompanyWorker.new.perform('Stamped')
+    end
+    expect(Company.count).to eq(1)
+    company = Company.last
+    expect(company.is_acquired).to be true
+    expect(company.acquired_on).to eq(Date.parse('2012-10-25'))
+    expect(company.acquired_by).to eq('Yahoo! acquired Stamped')
   end
 
   describe 'hit the api limits' do

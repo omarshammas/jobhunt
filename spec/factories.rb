@@ -16,6 +16,11 @@ FactoryGirl.define do
     thumb_url { 'http://placehold.it/70X50&text=thumbnail' }
     angellist_quality  { rand(11) }
 
+    trait :acquired do
+      is_acquired true
+      acquired_on Date.today
+      acquired_by { "Example bought #{name}" }
+    end
 
     factory :company_with_investors do
       transient do

@@ -32,6 +32,15 @@
 %p
   %b Headquarters:
   = @company.headquarters
+%p
+  %b Is acquired:
+  = @company.is_acquired
+%p
+  %b Acquired by:
+  = @company.acquired_by
+%p
+  %b Acquired on:
+  = @company.acquired_on
 
 %br
 %h3= "#{@company.funding_rounds.size} Funding Rounds"

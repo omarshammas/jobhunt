@@ -30,7 +30,7 @@ RSpec.describe "Companies", type: :request, js: true do
     end
 
     it 'edits a company' do
-      @new_company = FactoryGirl.build :company, is_closed: !@company.is_closed
+      @new_company = FactoryGirl.build :company, :acquired, is_closed: !@company.is_closed
 
       click_link_in_row @company, 'Edit'
       fill_in_company_form @new_company
@@ -57,8 +57,8 @@ RSpec.describe "Companies", type: :request, js: true do
   end
 
   def fill_in_company_form company
-    dates = %w{founded_on}
-    checkboxes = %w{is_closed}
+    dates = %w{founded_on acquired_on}
+    checkboxes = %w{is_closed is_acquired}
     attributes = company_attributes - dates - checkboxes
     attributes.each do |attribute|
       fill_in "company[#{attribute}]", with: company.send(attribute)

@@ -25,6 +25,16 @@
   .field
     = f.label :headquarters
     = f.text_field :headquarters
+
+  .field
+    = f.label :is_acquired
+    = f.check_box :is_acquired
+  .field
+    = f.label :acquired_by
+    = f.text_field :acquired_by
+  .field
+    = f.label :acquired_on
+    = f.date_select :acquired_on, start_year: 1950, end_year: Date.today.year, include_blank: true
   .actions
     = f.submit 'Save', class: 'btn btn-primary'
     - if not @company.new_record?

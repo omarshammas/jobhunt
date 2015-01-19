@@ -45,6 +45,13 @@ class CrunchbaseCompanyWorker
     headquarter = cb_company.headquarters.first
     company.headquarters = "#{headquarter.city}, #{headquarter.region}" if headquarter
 
+    acquired_by = cb_company.acquired_by.try(:first)
+    if acquired_by
+      company.is_acquired = true
+      company.acquired_by = acquired_by.name
+      company.acquired_on = acquired_by.announced_on
+    end
+
     cb_company.funding_rounds.map(&:permalink).each do |funding_round_permalink|
       cb_funding_round = Crunchbase::FundingRound.get funding_round_permalink
 
