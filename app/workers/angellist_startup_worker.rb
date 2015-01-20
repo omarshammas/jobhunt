@@ -7,7 +7,7 @@ class AngellistStartupWorker
     return unless company
 
 
-    company_slug = company_name.downcase.gsub(' ', '-')
+    company_slug = company.permaname
     client = AngellistApi::Client.new
     angl_companies = client.startup_search slug: company_slug
 

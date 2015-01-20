@@ -1,0 +1,20 @@
+%p#notice= notice
+
+%p
+  %b Company:
+  = @job.company.name
+- %w{title angellist_job_id job_type location remote_ok role currency_code description tags}.each do |attribute|
+  %p
+    %b= "#{attribute.humanize}:"
+    = @job.send(attribute)
+- %w{salary_min salary_max}.each do |attribute|
+  %p
+    %b= "#{attribute.humanize}:"
+    = number_to_currency @job.send(attribute), precision: 0 if @job.send(attribute)
+- %w{equity_min equity_max equity_cliff equity_vest}.each do |attribute|
+  %p
+    %b= "#{attribute.humanize}:"
+    = @job.send(attribute)
+
+= link_to 'Edit', edit_job_path(@job), class: 'btn btn-default'
+= link_to 'Back', jobs_path, class: 'btn btn-default'

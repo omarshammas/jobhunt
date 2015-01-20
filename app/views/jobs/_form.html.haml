@@ -1,0 +1,43 @@
+= form_for @job do |f|
+  - if @job.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@job.errors.count, "error")} prohibited this job from being saved:"
+      %ul
+        - @job.errors.full_messages.each do |msg|
+          %li= msg
+
+  - %i{ company_id title job_type location role currency_code }.each do |attribute|
+    .field
+      = f.label attribute
+      = f.text_field attribute
+  .field
+    = f.label :remote_ok
+    = f.check_box :remote_ok
+  .field
+    = f.label :angellist_job_id
+    = f.number_field :angellist_job_id, min: 0, step: 1
+  .field
+    = f.label :description
+    = f.text_area :description
+  %h4 Salary
+  - %i{ salary_min salary_max }.each do |attribute|
+    .field
+      = f.label attribute
+      = f.number_field attribute, step: 1000, min: 0
+  %h4 Equity
+  - %i{ equity_min equity_max equity_cliff equity_vest }.each do |attribute|
+    .field
+      = f.label attribute
+      = f.number_field attribute, step: 0.01, min: 0
+  %h4 Tags
+  .field
+    = f.label :tags
+    = f.text_area :tags, value: f.object.tags.join(', ')
+
+
+
+  .actions
+    = f.submit 'Save', class: 'btn btn-primary'
+    - if not @job.new_record?
+      = link_to 'Show', @job
+    = link_to 'Back', jobs_path

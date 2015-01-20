@@ -26,7 +26,7 @@ class CrunchbaseCompanyWorker
       return
     end
 
-    company_permalink = company_name.downcase.gsub(' ', '-')
+    company_permalink = Company.permaname company_name
     cb_company = Crunchbase::Organization.get company_permalink
 
     company = Company.new

@@ -43,6 +43,9 @@
   = @company.acquired_on
 
 %br
+%h3= "#{@company.jobs.size} Jobs"
+= render partial: 'jobs/table', locals: { jobs: @company.jobs }
+%br
 %h3= "#{@company.funding_rounds.size} Funding Rounds"
 = render partial: 'funding_rounds/table', locals: { funding_rounds: @company.funding_rounds.order_by_most_recent }
 

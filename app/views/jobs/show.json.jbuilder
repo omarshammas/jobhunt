@@ -1,0 +1,1 @@
+json.extract! @job, :id, :title, :angellist_job_id, :job_type, :location, :role, :salary_min, :salary_max, :currency_code, :equity_min, :equity_max, :equity_cliff, :equity_vest, :remote_ok, :tags, :company_id, :description, :created_at, :updated_at

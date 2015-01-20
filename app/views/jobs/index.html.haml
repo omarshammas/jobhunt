@@ -1,0 +1,8 @@
+%h1= "#{@jobs.count} Jobs"
+
+= will_paginate @jobs
+= render partial: 'table', locals: { jobs: @jobs }
+= will_paginate @jobs
+
+%br
+= link_to 'New Job', new_job_path, class: 'btn btn-primary'

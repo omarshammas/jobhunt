@@ -1,0 +1,21 @@
+- if jobs.any?
+  %table.table.table-condensed.table-hover
+    %thead
+      %tr
+        %th Company
+        %th Title
+        %th Location
+        %th Salary & Equity
+        %th{colspan: 4} Actions
+
+    %tbody
+      - jobs.each do |job|
+        %tr{id: get_html_id(job), title: job.description}
+          %td= job.company.try(:name)
+          %td= job.title
+          %td= job.location
+          %td= job.compensation_summary
+          %td= link_to 'Angellist', job.angellist_url, target: '_blank' if job.angellist_job_id
+          %td= link_to 'Show', job
+          %td= link_to 'Edit', edit_job_path(job)
+          %td= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }
