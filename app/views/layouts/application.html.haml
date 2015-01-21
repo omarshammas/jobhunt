@@ -17,6 +17,8 @@
             %li= link_to 'Funding Rounds', funding_rounds_path
             %li= link_to 'Investors', investors_path
             %li= link_to 'Jobs', jobs_path
+            - if current_user.try(:admin?)
+              %li= link_to 'Sidekiq', sidekiq_path
           .clearfix
 
     .container

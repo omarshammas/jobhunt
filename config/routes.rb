@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :investors
   resources :jobs
 
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => '/sidekiq', as: :sidekiq
+  end
 
   root 'companies#index'
 end
