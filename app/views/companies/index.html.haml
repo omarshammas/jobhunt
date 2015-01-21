@@ -1,8 +1,9 @@
 %h1= "#{@companies.count} Companies"
 
+- if current_user.try(:admin?)
+  = link_to 'New Company', new_company_path, class: 'btn btn-primary'
+  %br
+
 = will_paginate @companies
 = render partial: 'table', locals: { companies: @companies }
 = will_paginate @companies
-
-%br
-= link_to 'New Company', new_company_path, class: 'btn btn-primary'

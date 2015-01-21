@@ -1,5 +1,6 @@
 class InvestorsController < ApplicationController
   before_action :set_investor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :require_admin,  except: [:index, :show]
 
   # GET /investors
   # GET /investors.json

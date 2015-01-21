@@ -1,5 +1,18 @@
 FactoryGirl.define do
 
+  factory :user do
+    transient do
+      sequence(:n) { |n| n }
+    end
+    email { "user#{n}@example.com" }
+    password 'test1234'
+    admin false
+
+    factory :admin do
+      admin true
+    end
+  end
+
   factory :company do
     transient do
       sequence(:n) { |n| n }

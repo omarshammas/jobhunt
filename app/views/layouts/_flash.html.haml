@@ -1,0 +1,4 @@
+- if flash.any?
+  .flashes
+    - flash.each do |name, msg|
+      .flash{class: name}= msg

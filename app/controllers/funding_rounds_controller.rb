@@ -1,5 +1,7 @@
 class FundingRoundsController < ApplicationController
   before_action :set_funding_round, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :require_admin,  except: [:index, :show]
+
 
   # GET /funding_rounds
   # GET /funding_rounds.json

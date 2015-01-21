@@ -1,8 +1,9 @@
 %h1= "#{@jobs.count} Jobs"
 
+- if current_user.try(:admin?)
+  = link_to 'New Job', new_job_path, class: 'btn btn-primary'
+  %br
+
 = will_paginate @jobs
 = render partial: 'table', locals: { jobs: @jobs }
 = will_paginate @jobs
-
-%br
-= link_to 'New Job', new_job_path, class: 'btn btn-primary'

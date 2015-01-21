@@ -4,7 +4,10 @@
       %th Name
       %th Founded on
       %th Headquarters
-      %th{colspan: 4} Actions
+      - if current_user.try(:admin?)
+        %th{colspan: 4} Actions
+      - else
+        %th{colspan: 2} Actions
 
   %tbody
     - companies.each do |company|
@@ -14,5 +17,6 @@
         %td= company.headquarters
         %td= link_to 'Website', company.homepage_url, target: '_blank' unless company.homepage_url.blank?
         %td= link_to 'Show', company
-        %td= link_to 'Edit', edit_company_path(company)
-        %td= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }
+        - if current_user.try(:admin?)
+          %td= link_to 'Edit', edit_company_path(company)
+          %td= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }

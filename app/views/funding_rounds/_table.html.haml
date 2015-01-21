@@ -7,7 +7,10 @@
       %th Funding Type
       %th Series
       %th Investors
-      %th{colspan: 3} Actions
+      - if current_user.try(:admin?)
+        %th{colspan: 3} Actions
+      - else
+        %th{colspan: 1} Actions
 
   %tbody
     - funding_rounds.each do |funding_round|
@@ -19,5 +22,6 @@
         %td= funding_round.series
         %td= funding_round.investors.map(&:name).join(', ').truncate(40) if funding_round.investors.any?
         %td= link_to 'Show', funding_round
-        %td= link_to 'Edit', edit_funding_round_path(funding_round)
-        %td= link_to 'Destroy', funding_round, method: :delete, data: { confirm: 'Are you sure?' }
+        - if current_user.try(:admin?)
+          %td= link_to 'Edit', edit_funding_round_path(funding_round)
+          %td= link_to 'Destroy', funding_round, method: :delete, data: { confirm: 'Are you sure?' }

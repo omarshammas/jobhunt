@@ -1,0 +1,21 @@
+@import 'colors';
+
+.flashes {
+  margin-bottom: 50px;
+
+  .flash {
+    padding: 0 2% 5px 0;
+    margin-bottom: 0;
+
+    font-size: 20px;
+  
+    &.notice {
+      $green: #339933; 
+      color: $green;
+    }
+    &.alert {
+      $red: #DB0303;
+      color: $red;
+    }
+  }
+}

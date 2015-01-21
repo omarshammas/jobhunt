@@ -2,57 +2,101 @@ require 'rails_helper'
 
 RSpec.describe "Investors", type: :request, js: true do
 
-  describe 'Rest actions' do
+  describe 'Ananonymous User' do
     before(:each) do
       @investor = FactoryGirl.create :investor
       visit investors_path
       expect(page).to have_selector(get_html_id(@investor))
+      expect(page).to_not have_link('New Investor')
     end
 
-    it 'lists all investors' do
-      @investors = FactoryGirl.create_list :investor, 5
-      refresh_page # because we created 5 investors that weren't on the page
-
-      @investors.each do |investor|
-        validate_investor_in_table investor
+    describe 'permissions' do
+      it 'requires authentication to create or edit a company' do
+        requires_sign_in new_investor_path
+        requires_sign_in edit_investor_path(@investor)
       end
     end
 
-    it 'create a investor' do
-      @new_investor = FactoryGirl.build :investor
+    describe 'Rest actions' do
+      it 'lists all investors' do
+        @investors = FactoryGirl.create_list :investor, 5
+        refresh_page # because we created 5 investors that weren't on the page
 
-      click_link 'New Investor'
-      fill_in_investor_form @new_investor
-
-      expect(page).to have_content('Investor was successfully created.')
-      expect(current_path).to eq(investor_path(Investor.last))
-      validate_last_investor_in_db @new_investor
-    end
-
-    it 'edits a investor' do
-      @new_investor = FactoryGirl.build :investor
-
-      click_link_in_row @investor, 'Edit'
-      fill_in_investor_form @new_investor
-
-      expect(page).to have_content('Investor was successfully updated.')
-      expect(current_path).to eq(investor_path(@investor))
-      validate_last_investor_in_db @new_investor
-    end
-
-    it 'shows a investor' do
-      click_link_in_row @investor, 'Show'
-      investor_attributes.each do |attribute|
-        expect(page).to have_content(@investor.send(attribute))
+        @investors.each do |investor|
+          validate_investor_in_table investor
+        end
       end
-      expect(current_path).to eq(investor_path(@investor))
+
+      it 'shows a investor' do
+        click_link_in_row @investor, 'Show'
+        expect(page).to_not have_link('Edit', href: edit_investor_path(@investor))
+        investor_attributes.each do |attribute|
+          expect(page).to have_content(@investor.send(attribute))
+        end
+        expect(current_path).to eq(investor_path(@investor))
+      end
+    end
+  end
+
+  describe 'Admin' do
+    before(:each) do
+      @admin = FactoryGirl.create :admin
+      sign_in @admin
     end
 
-    it 'destroys a investor' do
-      click_link_in_row @investor, 'Destroy'
-      expect(page).to have_content('Investor was successfully destroyed.')
-      expect(current_path).to eq(investors_path)
-      expect{@investor.reload}.to raise_error(ActiveRecord::RecordNotFound)
+    describe 'Rest actions' do
+      before(:each) do
+        @investor = FactoryGirl.create :investor
+        visit investors_path
+        expect(page).to have_selector(get_html_id(@investor))
+      end
+
+      it 'lists all investors' do
+        @investors = FactoryGirl.create_list :investor, 5
+        refresh_page # because we created 5 investors that weren't on the page
+
+        @investors.each do |investor|
+          validate_investor_in_table investor
+        end
+      end
+
+      it 'create a investor' do
+        @new_investor = FactoryGirl.build :investor
+
+        click_link 'New Investor'
+        fill_in_investor_form @new_investor
+
+        expect(page).to have_content('Investor was successfully created.')
+        expect(current_path).to eq(investor_path(Investor.last))
+        validate_last_investor_in_db @new_investor
+      end
+
+      it 'edits a investor' do
+        @new_investor = FactoryGirl.build :investor
+
+        click_link_in_row @investor, 'Edit'
+        fill_in_investor_form @new_investor
+
+        expect(page).to have_content('Investor was successfully updated.')
+        expect(current_path).to eq(investor_path(@investor))
+        validate_last_investor_in_db @new_investor
+      end
+
+      it 'shows a investor' do
+        click_link_in_row @investor, 'Show'
+        expect(page).to have_link('Edit', href: edit_investor_path(@investor))
+        investor_attributes.each do |attribute|
+          expect(page).to have_content(@investor.send(attribute))
+        end
+        expect(current_path).to eq(investor_path(@investor))
+      end
+
+      it 'destroys a investor' do
+        click_link_in_row @investor, 'Destroy'
+        expect(page).to have_content('Investor was successfully destroyed.')
+        expect(current_path).to eq(investors_path)
+        expect{@investor.reload}.to raise_error(ActiveRecord::RecordNotFound)
+      end
     end
   end
 

@@ -22,17 +22,25 @@
     .container
       .row
         .col-sm-12
-          - if flash.any?
-            .flashes
-              - flash.each do |name, msg|
-                .flash{class: name}= msg
-
-          = yield
+          - if content_for?(:content)
+            = yield(:content)
+          - else
+            = render 'layouts/flash'
+            = yield
 
     .container#footer
       .row
         .col-sm-12
           .pull-left
+            - if current_user
+              = link_to 'Sign out', destroy_user_session_path, method: :delete
+            - else
+              = link_to 'Sign in', new_user_session_path
+
+            &nbsp;
+            &nbsp;
+            &nbsp;
+
             Data from
             = link_to 'CrunchBase', 'https://www.crunchbase.com/', target: '_blank'
             and

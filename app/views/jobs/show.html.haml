@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %b Company:
   = @job.company.name
@@ -16,5 +14,7 @@
     %b= "#{attribute.humanize}:"
     = @job.send(attribute)
 
-= link_to 'Edit', edit_job_path(@job), class: 'btn btn-default'
+%br
+- if current_user.try(:admin?)
+  = link_to 'Edit', edit_job_path(@job), class: 'btn btn-default'
 = link_to 'Back', jobs_path, class: 'btn btn-default'
