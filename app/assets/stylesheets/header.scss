@@ -1,7 +1,19 @@
+@import 'colors';
+
 #header {
   margin-top: 40px;
 
   h1 {
     margin-top: 0;
+  }
+
+  #logo {
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
   }
 }
