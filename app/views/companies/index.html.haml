@@ -1,3 +1,8 @@
+%br
+= form_tag companies_path, method: :get, class: 'search-form' do
+  = text_field_tag :search, params[:search]
+  = submit_tag 'Search', class: 'btn btn-sm btn-default'
+
 %h1= "#{@companies.count} Companies"
 
 - if current_user.try(:admin?)
@@ -5,5 +10,5 @@
   %br
 
 = will_paginate @companies
-= render partial: 'table', locals: { companies: @companies }
+= render partial: 'table', locals: { companies: @companies } if @companies.any?
 = will_paginate @companies

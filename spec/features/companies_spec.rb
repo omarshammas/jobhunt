@@ -16,6 +16,24 @@ RSpec.describe "Companies", type: :request, js: true do
         requires_sign_in edit_company_path(@company)
       end
     end
+    it 'searches for a company' do
+       @companies = FactoryGirl.create_list :company, 5
+       @company1 = FactoryGirl.create :company, name: 'Happy Home'
+       @company2 = FactoryGirl.create :company, name: 'Home Time'
+
+       visit companies_path
+       fill_in 'search', with: 'home'
+       click_button 'Search'
+
+       expect(page).to have_text('2 Companies')
+
+       [@company1, @company2].each do |company|
+         validate_company_in_table company
+       end
+       @companies.each do |company|
+         expect(page).to_not have_text(company.name, wait: false)
+       end
+    end
     describe 'Rest actions' do
       it 'lists all companies' do
         @companies = FactoryGirl.create_list :company, 5
@@ -41,6 +59,25 @@ RSpec.describe "Companies", type: :request, js: true do
     before(:each) do
       @admin = FactoryGirl.create :admin
       sign_in @admin
+    end
+
+    it 'searches for a company' do
+       @companies = FactoryGirl.create_list :company, 5
+       @company1 = FactoryGirl.create :company, name: 'Happy Home'
+       @company2 = FactoryGirl.create :company, name: 'Home Time'
+
+       visit companies_path
+       fill_in 'search', with: 'home'
+       click_button 'Search'
+
+       expect(page).to have_text('2 Companies')
+
+       [@company1, @company2].each do |company|
+         validate_company_in_table company
+       end
+       @companies.each do |company|
+         expect(page).to_not have_text(company.name, wait: false)
+       end
     end
 
     describe 'Rest Actions' do

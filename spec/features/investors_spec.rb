@@ -11,10 +11,29 @@ RSpec.describe "Investors", type: :request, js: true do
     end
 
     describe 'permissions' do
-      it 'requires authentication to create or edit a company' do
+      it 'requires authentication to create or edit a investor' do
         requires_sign_in new_investor_path
         requires_sign_in edit_investor_path(@investor)
       end
+    end
+
+    it 'searches for an investor' do
+       @investors = FactoryGirl.create_list :investor, 5
+       @investor1 = FactoryGirl.create :investor, name: 'Home Ventures'
+       @investor2 = FactoryGirl.create :investor, name: 'Venture Time'
+
+       visit investors_path
+       fill_in 'search', with: 'venture'
+       click_button 'Search'
+
+       expect(page).to have_text('2 Investors')
+
+       [@investor1, @investor2].each do |investor|
+         validate_investor_in_table investor
+       end
+       @investors.each do |investor|
+         expect(page).to_not have_text(investor.name, wait: false)
+       end
     end
 
     describe 'Rest actions' do
@@ -43,6 +62,26 @@ RSpec.describe "Investors", type: :request, js: true do
       @admin = FactoryGirl.create :admin
       sign_in @admin
     end
+
+    it 'searches for an investor' do
+       @investors = FactoryGirl.create_list :investor, 5
+       @investor1 = FactoryGirl.create :investor, name: 'Home Ventures'
+       @investor2 = FactoryGirl.create :investor, name: 'Venture Time'
+
+       visit investors_path
+       fill_in 'search', with: 'venture'
+       click_button 'Search'
+
+       expect(page).to have_text('2 Investors')
+
+       [@investor1, @investor2].each do |investor|
+         validate_investor_in_table investor
+       end
+       @investors.each do |investor|
+         expect(page).to_not have_text(investor.name, wait: false)
+       end
+    end
+
 
     describe 'Rest actions' do
       before(:each) do

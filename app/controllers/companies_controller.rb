@@ -6,7 +6,9 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
+    params[:search] ||= ""
     @companies = Company.order(:name)
+                        .where('name ILIKE ?', "%#{params[:search]}%")
                         .paginate(page: params[:page])
   end
 
