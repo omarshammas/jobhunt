@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   resources :investors
   resources :jobs
 
+  scope 'analysis', as: :analysis  do
+    get 'scatter_plot', to: 'analysis#scatter_plot'
+    get 'line_chart_time_alive', to: 'analysis#line_chart_time_alive'
+    get 'line_chart_since_2005', to: 'analysis#line_chart_since_2005'
+  end
+
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq', as: :sidekiq
   end

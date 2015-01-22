@@ -1,0 +1,38 @@
+%h1 Money Raised (1,000,000 USD) vs Time Since Founding (Days)
+%h4= "#{@companies.count} Companies"
+
+%br
+%br
+#chart
+
+- xs = {}
+- columns = []
+- @companies.each do |company|
+  - 
+  - xs[company.name] = "#{company.id}_x"
+  - columns << ["#{company.id}_x", (Date.today - company.founded_on).to_i]
+  - columns << [company.name, company.total_money_raised / 1000]
+
+:javascript
+
+  var xs = #{xs.to_json}
+  var columns = #{columns.to_json}
+
+:coffee
+
+  chart = c3.generate
+    size:
+      height: 800
+    legend:
+      show: true
+    data:
+      xs: xs
+      columns: columns
+      type: 'scatter'
+    axis:
+      x:
+        label: 'Time Since Founding (days)'
+        tick:
+          fit: false
+      y:
+        label: 'Money Raised (1,000,000 USD)'

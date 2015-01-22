@@ -12,4 +12,10 @@ class Company < ActiveRecord::Base
     self.class.permaname name
   end
 
+  def total_money_raised
+    funding_rounds.map do |funding_round|
+                    funding_round.money_raised_usd || 0
+                  end.inject(:+) || 0
+  end
+
 end
