@@ -5,6 +5,8 @@ class Company < ActiveRecord::Base
 
   validates :name, presence: true
 
+  before_save :calculate_total_money_raised
+
   def self.permaname name
     name.downcase.gsub(' ', '-')
   end
@@ -12,10 +14,12 @@ class Company < ActiveRecord::Base
     self.class.permaname name
   end
 
-  def total_money_raised
-    funding_rounds.map do |funding_round|
-                    funding_round.money_raised_usd || 0
-                  end.inject(:+) || 0
+private
+
+  def calculate_total_money_raised
+    self.total_money_raised_usd = funding_rounds.map do |funding_round|
+                                             funding_round.money_raised_usd || 0
+                                           end.inject(:+) || 0
   end
 
 end

@@ -11,7 +11,7 @@
   - 
   - xs[company.name] = "#{company.id}_x"
   - columns << ["#{company.id}_x", (Date.today - company.founded_on).to_i]
-  - columns << [company.name, company.total_money_raised / 1000]
+  - columns << [company.name, company.total_money_raised_usd / 1000]
 
 :javascript
 
