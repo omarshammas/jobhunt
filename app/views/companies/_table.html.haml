@@ -3,6 +3,7 @@
     %tr
       %th Name
       %th Founded on
+      %th Total Money Raised (USD)
       %th Headquarters
       - if current_user.try(:admin?)
         %th{colspan: 4} Actions
@@ -14,6 +15,7 @@
       %tr{id: get_html_id(company), class: ('closed' if company.is_closed? || company.is_acquired?) }
         %td{title: company.short_description}= company.name
         %td= company.founded_on.to_s(:simple_date) if company.founded_on
+        %td= number_to_currency(company.total_money_raised_usd, precision: 0) if company.total_money_raised_usd
         %td= company.headquarters
         %td= link_to 'Website', company.homepage_url, target: '_blank' unless company.homepage_url.blank?
         %td= link_to 'Show', company

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123031423) do
+ActiveRecord::Schema.define(version: 20150123052810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150123031423) do
     t.boolean  "is_acquired",                      default: false
     t.date     "acquired_on"
     t.string   "acquired_by",                      default: ""
-    t.integer  "total_money_raised_usd", limit: 8
+    t.integer  "total_money_raised_usd", limit: 8, default: 0
   end
 
   create_table "funding_rounds", force: :cascade do |t|

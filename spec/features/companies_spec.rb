@@ -138,9 +138,10 @@ RSpec.describe "Companies", type: :request, js: true do
   end
 
   def fill_in_company_form company
+    ignore = %w{ total_money_raised_usd }
     dates = %w{founded_on acquired_on}
     checkboxes = %w{is_closed is_acquired}
-    attributes = company_attributes - dates - checkboxes
+    attributes = company_attributes - ignore - dates - checkboxes
     attributes.each do |attribute|
       fill_in "company[#{attribute}]", with: company.send(attribute)
     end
@@ -169,6 +170,7 @@ RSpec.describe "Companies", type: :request, js: true do
       end
     end
     expect(page).to have_text(company.founded_on.to_s(:simple_date)) if company.founded_on
+    expect(page).to have_text(number_to_currency(company.total_money_raised_usd, precision: 0)) if company.total_money_raised_usd
     expect(page).to have_link('Website', href: company.homepage_url) unless company.homepage_url.blank?
   end
 
