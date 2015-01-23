@@ -1,3 +1,5 @@
+= render partial: 'slider', locals: { url: analysis_line_chart_time_alive_path }
+
 %h1 Money Raised (1,000,000 USD) vs Time Alive (Days)
 %h4= "#{@companies.count} Companies"
 
@@ -9,7 +11,7 @@
 - columns = []
 - @companies.each do |company|
   - xs[company.name] = "#{company.id}_x"
-  - funding_rounds = company.funding_rounds.order_by_most_recent.reverse.select { |fr| fr.announced_on != nil } 
+  - funding_rounds = company.funding_rounds.sort_by(&:announced_on).select { |fr| fr.announced_on != nil }
   - total = 0
   - funding_rounds = funding_rounds.map do |fr|
     - [ total += ((fr.money_raised_usd || 0) / 1000), (fr.announced_on - company.founded_on).to_i]
@@ -25,7 +27,7 @@
 
   chart = c3.generate
     size:
-      height: 800
+      height: 600
     data:
       xs: xs
       columns: columns

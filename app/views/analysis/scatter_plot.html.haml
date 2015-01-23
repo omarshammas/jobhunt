@@ -1,3 +1,5 @@
+= render partial: 'slider', locals: { url: analysis_scatter_plot_path }
+
 %h1 Money Raised (1,000,000 USD) vs Time Since Founding (Days)
 %h4= "#{@companies.count} Companies"
 
@@ -22,7 +24,7 @@
 
   chart = c3.generate
     size:
-      height: 800
+      height: 600
     legend:
       show: true
     data:

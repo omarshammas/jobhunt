@@ -1,0 +1,30 @@
+%br
+#slider-range
+= form_tag url, method: :get do
+  .hide
+    = number_field_tag :min_range, params[:min_range]
+    = number_field_tag :max_range, params[:max_range]
+  %br
+  Total Money Raised Range:
+  %span#range
+  = submit_tag 'Go', class: 'btn btn-default'
+
+:coffee
+
+  set_range_text = (min_range, max_range) ->
+     $('#range').text('$' + min_range.toLocaleString() + ' - $' + max_range.toLocaleString())
+  options =
+    range: true
+    min: 0
+    max: 3500000000
+    step: 10000000
+    values: [$('#min_range').val(), $('#max_range').val()]
+    slide: (event, ui) ->
+      $('#min_range').val(ui.values[0])
+      $('#max_range').val(ui.values[1])
+      set_range_text(ui.values[0], ui.values[1])
+
+  $('#slider-range').slider(options)
+  set_range_text($('#slider-range').slider('values',0), $('#slider-range').slider('values',1))
+
+
